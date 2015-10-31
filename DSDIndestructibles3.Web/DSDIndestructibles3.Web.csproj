@@ -109,6 +109,7 @@
     <Content Include="forms\procesos\EvaluarRiesgoFraude.aspx" />
     <Content Include="forms\procesos\ProgramarInstalacion.aspx" />
     <Content Include="forms\procesos\RegistrarInstalacion.aspx" />
+    <Content Include="forms\procesos\SolicitarInstalacion.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -212,6 +213,13 @@
     </Compile>
     <Compile Include="forms\procesos\RegistrarInstalacion.aspx.designer.cs">
       <DependentUpon>RegistrarInstalacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\procesos\SolicitarInstalacion.aspx.cs">
+      <DependentUpon>SolicitarInstalacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\procesos\SolicitarInstalacion.aspx.designer.cs">
+      <DependentUpon>SolicitarInstalacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

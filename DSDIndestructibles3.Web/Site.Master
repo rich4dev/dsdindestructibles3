@@ -85,6 +85,7 @@
                             <li class="ui-widget-header">Afiliaciones</li>
                             <li><a href="EvaluarRiesgoFraude">Evaluar Riesgo Fraude</a></li>
                             <li class="ui-widget-header">Instalación</li>
+                            <li><a href="SolicitarInstalacion">Solicitar Instalación</a></li>
                             <li><a href="ProgramarInstalacion">Programar Instalación</a></li>
                             <li><a href="RegistrarInstalacion">Registrar Instalación</a></li>
                             <li class="ui-widget-header">Entregar Kit de Bienvenida</li>
