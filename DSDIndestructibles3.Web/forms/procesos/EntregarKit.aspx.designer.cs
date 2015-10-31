@@ -49,21 +49,30 @@ namespace DSDIndestructibles3.Web.forms.procesos {
         protected global::System.Web.UI.WebControls.GridView gvSolicitudes;
         
         /// <summary>
-        /// btnEntregado control.
+        /// txtComentarios control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEntregado;
+        protected global::System.Web.UI.WebControls.TextBox txtComentarios;
         
         /// <summary>
-        /// btnNoEntregado control.
+        /// btnGrabar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNoEntregado;
+        protected global::System.Web.UI.WebControls.Button btnGrabar;
+        
+        /// <summary>
+        /// btnSalir control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSalir;
     }
 }
