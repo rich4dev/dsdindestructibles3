@@ -29,3 +29,21 @@ textarea {
         padding: 0;
     }
 }
+
+#wrapper {
+  margin-left: 200px;
+}
+#contenido {
+  float: right;
+  width: 100%;
+  /*background-color: #CCF;*/
+}
+#sidebar {
+  float: left;
+  width: 200px;
+  margin-left: -200px;
+  /*background-color: #FFA;*/
+}
+#cleared {
+  clear: both;
+}

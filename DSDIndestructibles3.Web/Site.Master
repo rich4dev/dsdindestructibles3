@@ -6,15 +6,33 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - Visanet Instalaciones de POS </title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#menu").menu({
+                items: "> :not(.ui-widget-header)"
+            });
+        });
+    </script>
+    <style>
+        .ui-menu {
+            width: 200px;
+        }
 
+        .ui-widget-header {
+            padding: 0.2em;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -47,24 +65,42 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">Sistema de Instalación de POS</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/">Inicio</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
+
         </div>
         <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
+            <div id="wrapper">
+                <div id="sidebar">
+                    <div>
+                        <ul id="menu">
+                            <li class="ui-widget-header">Instalación</li>
+                            <li><a href="ProgramarInstalacion">Programar Instalación</a></li>
+                            <li><a href="RegistrarInstalacion">Registrar Instalación</a></li>
+                            <li class="ui-widget-header">Entregar Kit de Bienvenida</li>
+                            <li><a href="RegistrarKitBienvenida">Entregar kit</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="contenido">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <hr />
+                </div>
+                <div id="cleared">                                <footer>
+                        <p>&copy; <%: DateTime.Now.Year %> - Visanet</p>
+                    </footer></div>
+                </div>
+
+
         </div>
 
     </form>
