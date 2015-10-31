@@ -65,7 +65,7 @@
         <tr>
             <td>Cargo del capacitado:</td>
             <td>
-                <asp:TextBox ID="TextBox10" runat="server" OnTextChanged="TextBox10_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="TextBox10" runat="server" ></asp:TextBox>
             </td>
             <td></td>
             <td></td>
