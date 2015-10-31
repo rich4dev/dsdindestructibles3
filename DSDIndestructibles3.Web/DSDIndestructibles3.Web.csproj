@@ -106,6 +106,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="forms\procesos\EntregarKit.aspx" />
+    <Content Include="forms\procesos\EvaluarRiesgoFraude.aspx" />
     <Content Include="forms\procesos\ProgramarInstalacion.aspx" />
     <Content Include="forms\procesos\RegistrarInstalacion.aspx" />
     <Content Include="Inicio.aspx" />
@@ -190,6 +191,13 @@
     </Compile>
     <Compile Include="forms\procesos\EntregarKit.aspx.designer.cs">
       <DependentUpon>EntregarKit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\procesos\EvaluarRiesgoFraude.aspx.cs">
+      <DependentUpon>EvaluarRiesgoFraude.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\procesos\EvaluarRiesgoFraude.aspx.designer.cs">
+      <DependentUpon>EvaluarRiesgoFraude.aspx</DependentUpon>
     </Compile>
     <Compile Include="forms\procesos\ProgramarInstalacion.aspx.cs">
       <DependentUpon>ProgramarInstalacion.aspx</DependentUpon>

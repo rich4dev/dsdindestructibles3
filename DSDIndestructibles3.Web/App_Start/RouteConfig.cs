@@ -17,6 +17,7 @@ namespace DSDIndestructibles3.Web
             routes.MapPageRoute("Route1", "RegistrarKitBienvenida", "~/forms/procesos/EntregarKit.aspx");
             routes.MapPageRoute("Route2", "ProgramarInstalacion", "~/forms/procesos/ProgramarInstalacion.aspx");
             routes.MapPageRoute("Route3", "RegistrarInstalacion", "~/forms/procesos/RegistrarInstalacion.aspx");
+            routes.MapPageRoute("Route4", "EvaluarRiesgoFraude", "~/forms/procesos/EvaluarRiesgoFraude.aspx");
         }
     }
 }
