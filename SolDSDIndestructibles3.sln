@@ -5,7 +5,11 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.Web", "DSDIndestructibles3.Web\DSDIndestructibles3.Web.csproj", "{65C62153-F34A-405D-A3E8-384D04478864}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DSDIndestructibles3.UI", "DSDIndestructibles3.UI", "{E5D2D16D-7191-4315-B16E-AAA68849A0A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.Entities", "DSDIndestructibles3.Entities\DSDIndestructibles3.Entities.csproj", "{C0C1C19C-C60A-4C83-8BBA-14BE56159AC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.Data", "DSDIndestructibles3.Data\DSDIndestructibles3.Data.csproj", "{5FE3008D-8255-4E7F-AB30-94634B139B47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.Service", "DSDIndestructibles3.Service\DSDIndestructibles3.Service.csproj", "{130EC5DE-1AAE-4E50-B6D6-42B8194EA4F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,11 +21,20 @@ Global
 		{65C62153-F34A-405D-A3E8-384D04478864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65C62153-F34A-405D-A3E8-384D04478864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65C62153-F34A-405D-A3E8-384D04478864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C1C19C-C60A-4C83-8BBA-14BE56159AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C1C19C-C60A-4C83-8BBA-14BE56159AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C1C19C-C60A-4C83-8BBA-14BE56159AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C1C19C-C60A-4C83-8BBA-14BE56159AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE3008D-8255-4E7F-AB30-94634B139B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE3008D-8255-4E7F-AB30-94634B139B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE3008D-8255-4E7F-AB30-94634B139B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE3008D-8255-4E7F-AB30-94634B139B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{130EC5DE-1AAE-4E50-B6D6-42B8194EA4F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{130EC5DE-1AAE-4E50-B6D6-42B8194EA4F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{130EC5DE-1AAE-4E50-B6D6-42B8194EA4F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{130EC5DE-1AAE-4E50-B6D6-42B8194EA4F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{65C62153-F34A-405D-A3E8-384D04478864} = {E5D2D16D-7191-4315-B16E-AAA68849A0A0}
 	EndGlobalSection
 EndGlobal
