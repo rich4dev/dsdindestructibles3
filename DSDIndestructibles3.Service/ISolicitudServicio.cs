@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DSDIndestructibles3.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,6 +13,13 @@ namespace DSDIndestructibles3.Service
     public interface ISolicitudServicio
     {
         [OperationContract]
-        void DoWork();
+        void Registrar(SolicitudServicioBE oSolicitudServicioBE);
+        [OperationContract]
+        void Actualizar(SolicitudServicioBE oSolicitudServicioBE);
+        [OperationContract]
+        void Eliminar(int id);
+        [OperationContract]
+        List<SolicitudServicioBE> Eliminar(DateTime fechaDesde, DateTime fechaHasta, string estado);
+
     }
 }
