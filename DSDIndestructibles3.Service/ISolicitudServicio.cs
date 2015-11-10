@@ -8,7 +8,6 @@ using System.Text;
 
 namespace DSDIndestructibles3.Service
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "ISolicitudServicio" in both code and config file together.
     [ServiceContract]
     public interface ISolicitudServicio
     {
@@ -22,6 +21,5 @@ namespace DSDIndestructibles3.Service
         SolicitudServicioBE Obtener(int id);
         [OperationContract]
         List<SolicitudServicioBE> ListarBandeja(DateTime fechaDesde, DateTime fechaHasta, string estado, int empresaId);
-
     }
 }
