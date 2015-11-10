@@ -6,12 +6,15 @@
       <xs:element minOccurs="0" name="CapacitadoCargo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CapacitadoFecha" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="CapacitadoNombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClienteRazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClienteRuc" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ComercioId" type="xs:int" />
       <xs:element minOccurs="0" name="EmpresaId" type="xs:int" />
       <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FechaMod" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="FechaReg" type="xs:dateTime" />
       <xs:element minOccurs="0" name="MotivoSolicitudId" type="xs:int" />
+      <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Senalizado" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SenalizadoDescripcion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SerieFisicoAtn" nillable="true" type="xs:string" />

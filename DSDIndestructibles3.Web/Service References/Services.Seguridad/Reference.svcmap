@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="99955779-e354-4579-a7cd-4d6ec4ecba35" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:29231/Seguridad.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Seguridad.wsdl" MetadataType="Wsdl" ID="728e535f-a4ed-42fb-813a-9245d131b4c7" SourceId="1" SourceUrl="http://localhost:29231/Seguridad.svc?wsdl" />
+    <MetadataFile FileName="Seguridad.xsd" MetadataType="Schema" ID="c58b50ed-4f0f-41c6-97c9-990da3467fb3" SourceId="1" SourceUrl="http://localhost:29231/Seguridad.svc?xsd=xsd0" />
+    <MetadataFile FileName="Seguridad1.xsd" MetadataType="Schema" ID="2ebd3703-b7b7-45d4-b01a-ec18175015d1" SourceId="1" SourceUrl="http://localhost:29231/Seguridad.svc?xsd=xsd1" />
+    <MetadataFile FileName="Seguridad.disco" MetadataType="Disco" ID="0d2e9fb3-fe22-42f7-a32b-e6d896954850" SourceId="1" SourceUrl="http://localhost:29231/Seguridad.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

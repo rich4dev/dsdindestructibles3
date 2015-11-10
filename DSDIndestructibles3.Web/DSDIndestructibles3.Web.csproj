@@ -158,13 +158,67 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Service References\SolicitudServicioServices\DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO.datasource">
+    <None Include="Service References\Services.Cliente\ClienteService.wsdl" />
+    <None Include="Service References\Services.Cliente\ClienteService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services.Cliente\ClienteService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services.Cliente\ClienteService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\Services.Cliente\DSDIndestructibles3.Web.Services.Cliente.ClienteDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\SolicitudServicioServices\SolicitudServicio.disco" />
-    <None Include="Service References\SolicitudServicioServices\configuration91.svcinfo" />
-    <None Include="Service References\SolicitudServicioServices\configuration.svcinfo" />
-    <None Include="Service References\SolicitudServicioServices\Reference.svcmap">
+    <Content Include="Service References\Services.MotivoSolicitud\DSDIndestructibles3.Web.Services.MotivoSolicitud.MotivoSolicitudDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\Services.MotivoSolicitud\MotivoSolicitudService.wsdl" />
+    <None Include="Service References\Services.MotivoSolicitud\MotivoSolicitudService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services.MotivoSolicitud\MotivoSolicitudService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services.MotivoSolicitud\MotivoSolicitudService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services.Seguridad\Seguridad.disco" />
+    <None Include="Service References\Services.Seguridad\configuration91.svcinfo" />
+    <None Include="Service References\Services.Seguridad\configuration.svcinfo" />
+    <None Include="Service References\Services.Seguridad\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Services.Cliente\ClienteService.disco" />
+    <None Include="Service References\Services.Cliente\configuration91.svcinfo" />
+    <None Include="Service References\Services.Cliente\configuration.svcinfo" />
+    <None Include="Service References\Services.Cliente\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Services.MotivoSolicitud\MotivoSolicitudService.disco" />
+    <None Include="Service References\Services.MotivoSolicitud\configuration91.svcinfo" />
+    <None Include="Service References\Services.MotivoSolicitud\configuration.svcinfo" />
+    <None Include="Service References\Services.MotivoSolicitud\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\Services.SolicitudServicio\DSDIndestructibles3.Web.Services.SolicitudServicio.SolicitudServicioDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\Services.Seguridad\Seguridad.wsdl" />
+    <None Include="Service References\Services.Seguridad\Seguridad.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services.Seguridad\Seguridad1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services.SolicitudServicio\SolicitudServicio.disco" />
+    <None Include="Service References\Services.SolicitudServicio\configuration91.svcinfo" />
+    <None Include="Service References\Services.SolicitudServicio\configuration.svcinfo" />
+    <None Include="Service References\Services.SolicitudServicio\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -175,14 +229,14 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
-    <None Include="Service References\SolicitudServicioServices\SolicitudServicio.wsdl" />
-    <None Include="Service References\SolicitudServicioServices\SolicitudServicio.xsd">
+    <None Include="Service References\Services.SolicitudServicio\SolicitudServicio.wsdl" />
+    <None Include="Service References\Services.SolicitudServicio\SolicitudServicio.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SolicitudServicioServices\SolicitudServicio1.xsd">
+    <None Include="Service References\Services.SolicitudServicio\SolicitudServicio1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SolicitudServicioServices\SolicitudServicio2.xsd">
+    <None Include="Service References\Services.SolicitudServicio\SolicitudServicio2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">
@@ -277,7 +331,22 @@
     </Compile>
     <Compile Include="MySession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\SolicitudServicioServices\Reference.cs">
+    <Compile Include="Service References\Services.Cliente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Services.MotivoSolicitud\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Services.Seguridad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Services.SolicitudServicio\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -308,7 +377,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\SolicitudServicioServices\" />
+    <WCFMetadataStorage Include="Service References\Services.Cliente\" />
+    <WCFMetadataStorage Include="Service References\Services.MotivoSolicitud\" />
+    <WCFMetadataStorage Include="Service References\Services.Seguridad\" />
+    <WCFMetadataStorage Include="Service References\Services.SolicitudServicio\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

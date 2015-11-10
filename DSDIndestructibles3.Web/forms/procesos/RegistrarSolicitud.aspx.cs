@@ -19,24 +19,29 @@ namespace DSDIndestructibles3.Web.forms.procesos
 
         private void LoadData()
         {
-            SolicitudServicioServices.SolicitudServicioClient oClient = new SolicitudServicioServices.SolicitudServicioClient();
-            SolicitudServicioServices.SolicitudServicioDTO oSol = new SolicitudServicioServices.SolicitudServicioDTO();
+            Services.SolicitudServicio.SolicitudServicioClient oClient = new Services.SolicitudServicio.SolicitudServicioClient();
+            Services.SolicitudServicio.SolicitudServicioDTO oSol = new Services.SolicitudServicio.SolicitudServicioDTO();
 
-        
+            Services.Cliente.ClienteServiceClient oClienteServiceClient = new Services.Cliente.ClienteServiceClient();
+            Services.Cliente.ClienteDTO oCliente= new Services.Cliente.ClienteDTO();
+
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
             {
-                SolicitudServicioServices.SolicitudServicioClient oClient = new SolicitudServicioServices.SolicitudServicioClient();
-                SolicitudServicioServices.SolicitudServicioDTO oSol = new SolicitudServicioServices.SolicitudServicioDTO();
+                Services.SolicitudServicio.SolicitudServicioClient oClient = new Services.SolicitudServicio.SolicitudServicioClient();
+                Services.SolicitudServicio.SolicitudServicioDTO oSol = new Services.SolicitudServicio.SolicitudServicioDTO();
                 oSol.ComercioId = int.Parse(ddlCom.SelectedValue);
                 oSol.MotivoSolicitudId = int.Parse(ddlMotSol.SelectedValue);
                 oSol.TerminalSolicitadoId = int.Parse(ddlTerSol.SelectedValue);
                 oSol.Estado = ddlEstado.SelectedValue;
                 oSol.UsrReg = MySession.UserId;
                 oClient.Registrar(oSol);
+
+                ClientScriptManager cs = Page.ClientScript;
+                cs.RegisterClientScriptBlock(this.GetType(), "Msj", "Solicitud registrada correctamente.");
             }
             catch (Exception)
             {

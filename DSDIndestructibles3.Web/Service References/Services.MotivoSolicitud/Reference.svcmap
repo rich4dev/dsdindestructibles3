@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c0ed2d5c-8b86-4096-bf7e-5eb4a1688f4b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:29231/MotivoSolicitudService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MotivoSolicitudService.disco" MetadataType="Disco" ID="dc14963d-8df5-448c-aa45-68cf9dbc75ae" SourceId="1" SourceUrl="http://localhost:29231/MotivoSolicitudService.svc?disco" />
+    <MetadataFile FileName="MotivoSolicitudService.xsd" MetadataType="Schema" ID="05703546-8886-42bf-8d29-afcbdb60c03e" SourceId="1" SourceUrl="http://localhost:29231/MotivoSolicitudService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MotivoSolicitudService.wsdl" MetadataType="Wsdl" ID="11b0e197-4f62-42d6-89c4-f04c38ab40b3" SourceId="1" SourceUrl="http://localhost:29231/MotivoSolicitudService.svc?wsdl" />
+    <MetadataFile FileName="MotivoSolicitudService1.xsd" MetadataType="Schema" ID="3b86e986-26cf-4845-8582-6de9b367442c" SourceId="1" SourceUrl="http://localhost:29231/MotivoSolicitudService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MotivoSolicitudService2.xsd" MetadataType="Schema" ID="887e4e00-28f5-4c6b-90b7-71779e40fae0" SourceId="1" SourceUrl="http://localhost:29231/MotivoSolicitudService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
