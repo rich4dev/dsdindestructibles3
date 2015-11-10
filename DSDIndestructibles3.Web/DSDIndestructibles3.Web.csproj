@@ -113,6 +113,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="forms\procesos\BandejaSolicitud.aspx" />
     <Content Include="forms\procesos\EntregarKit.aspx" />
     <Content Include="forms\procesos\EvaluarRiesgoFraude.aspx" />
     <Content Include="forms\procesos\ProgramarInstalacion.aspx" />
@@ -214,6 +215,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\procesos\BandejaSolicitud.aspx.cs">
+      <DependentUpon>BandejaSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\procesos\BandejaSolicitud.aspx.designer.cs">
+      <DependentUpon>BandejaSolicitud.aspx</DependentUpon>
     </Compile>
     <Compile Include="forms\procesos\EntregarKit.aspx.cs">
       <DependentUpon>EntregarKit.aspx</DependentUpon>
