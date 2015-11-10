@@ -34,49 +34,49 @@ namespace DSDIndestructibles3.Entities
         }
 
         [DataMember] 
-        public virtual int Solicitudservicioid
+        public virtual int SolicitudServicioId
         {
             get { return solicitudservicioid; }
             set { solicitudservicioid = value; }
         }
 
         [DataMember] 
-        public virtual int Comercioid
+        public virtual int ComercioId
         {
             get { return comercioid; }
             set { comercioid = value; }
         }
 
         [DataMember] 
-        public virtual int Motivosolicitudid
+        public virtual int MotivoSolicitudId
         {
             get { return motivosolicitudid; }
             set { motivosolicitudid = value; }
         }
 
         [DataMember] 
-        public virtual int Terminalsolicitadoid
+        public virtual int TerminalSolicitadoId
         {
             get { return terminalsolicitadoid; }
             set { terminalsolicitadoid = value; }
         }
 
         [DataMember] 
-        public virtual int Terminalinstalado
+        public virtual int TerminalInstalado
         {
             get { return terminalinstalado; }
             set { terminalinstalado = value; }
         }
 
         [DataMember] 
-        public virtual string Seriefisicoatn
+        public virtual string SerieFisicoAtn
         {
             get { return seriefisicoatn; }
             set { seriefisicoatn = value; }
         }
 
         [DataMember] 
-        public virtual string Serievirtualatn
+        public virtual string SerieVirtualAtn
         {
             get { return serievirtualatn; }
             set { serievirtualatn = value; }
@@ -90,21 +90,21 @@ namespace DSDIndestructibles3.Entities
         }
 
         [DataMember] 
-        public virtual string Capacitadonombres
+        public virtual string CapacitadoNombres
         {
             get { return capacitadonombres; }
             set { capacitadonombres = value; }
         }
 
         [DataMember] 
-        public virtual string Capacitadocargo
+        public virtual string CapacitadoCargo
         {
             get { return capacitadocargo; }
             set { capacitadocargo = value; }
         }
 
         [DataMember] 
-        public virtual DateTime Capacitadofecha
+        public virtual DateTime CapacitadoFecha
         {
             get { return capacitadofecha; }
             set { capacitadofecha = value; }
@@ -118,7 +118,7 @@ namespace DSDIndestructibles3.Entities
         }
 
         [DataMember] 
-        public virtual string Senalizadodescripcion
+        public virtual string SenalizadoDescripcion
         {
             get { return senalizadodescripcion; }
             set { senalizadodescripcion = value; }
@@ -139,28 +139,28 @@ namespace DSDIndestructibles3.Entities
         }
 
         [DataMember] 
-        public virtual DateTime Fechareg
+        public virtual DateTime FechaReg
         {
             get { return fechareg; }
             set { fechareg = value; }
         }
 
         [DataMember] 
-        public virtual int Usrreg
+        public virtual int UsrReg
         {
             get { return usrreg; }
             set { usrreg = value; }
         }
 
         [DataMember] 
-        public virtual DateTime Fechamod
+        public virtual DateTime FechaMod
         {
             get { return fechamod; }
             set { fechamod = value; }
         }
 
         [DataMember] 
-        public virtual int Usrmod
+        public virtual int UsrMod
         {
             get { return usrmod; }
             set { usrmod = value; }
