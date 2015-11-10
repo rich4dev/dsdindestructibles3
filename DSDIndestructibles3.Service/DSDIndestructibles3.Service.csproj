@@ -87,6 +87,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DSDIndestructibles3.Data\DSDIndestructibles3.Data.csproj">
+      <Project>{5fe3008d-8255-4e7f-ab30-94634b139b47}</Project>
+      <Name>DSDIndestructibles3.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DSDIndestructibles3.Entities\DSDIndestructibles3.Entities.csproj">
       <Project>{c0c1c19c-c60a-4c83-8bba-14be56159ac5}</Project>
       <Name>DSDIndestructibles3.Entities</Name>

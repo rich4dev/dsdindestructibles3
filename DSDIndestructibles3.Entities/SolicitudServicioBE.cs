@@ -22,6 +22,7 @@ namespace DSDIndestructibles3.Entities
         String senalizado;
         string senalizadodescripcion;
         String estado;
+        int empresaId;
         DateTime fechareg;
         int usrreg;
         DateTime fechamod;
@@ -123,11 +124,18 @@ namespace DSDIndestructibles3.Entities
             set { senalizadodescripcion = value; }
         }
 
-        [DataMember] 
+        [DataMember]
         public virtual String Estado
         {
             get { return estado; }
             set { estado = value; }
+        }
+
+        [DataMember]
+        public virtual int EmpresaId
+        {
+            get { return empresaId; }
+            set { empresaId = value; }
         }
 
         [DataMember] 

@@ -19,7 +19,9 @@ namespace DSDIndestructibles3.Service
         [OperationContract]
         void Eliminar(int id);
         [OperationContract]
-        List<SolicitudServicioBE> Eliminar(DateTime fechaDesde, DateTime fechaHasta, string estado);
+        SolicitudServicioBE Obtener(int id);
+        [OperationContract]
+        List<SolicitudServicioBE> ListarBandeja(DateTime fechaDesde, DateTime fechaHasta, string estado, int empresaId);
 
     }
 }
