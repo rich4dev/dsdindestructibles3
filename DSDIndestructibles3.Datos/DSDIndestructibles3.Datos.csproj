@@ -66,6 +66,7 @@
     <Compile Include="SolicitudServicioData.cs" />
     <Compile Include="sysdiagrams.cs" />
     <Compile Include="Terminal.cs" />
+    <Compile Include="TerminalData.cs" />
     <Compile Include="TipoDocumento.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

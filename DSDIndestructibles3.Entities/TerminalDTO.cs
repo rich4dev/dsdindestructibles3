@@ -30,6 +30,9 @@ namespace DSDIndestructibles3.Entities
             set { terminalid = value; }
         }
 
+        [DataMember]
+        public string Descripcion { get; set; }
+
         [DataMember] 
         public virtual string Tipo
         {

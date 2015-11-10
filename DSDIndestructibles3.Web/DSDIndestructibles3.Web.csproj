@@ -222,6 +222,16 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\Services.Terminal\DSDIndestructibles3.Web.Services.Terminal.TerminalDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\Services.Terminal\TerminalService.disco" />
+    <None Include="Service References\Services.Terminal\configuration91.svcinfo" />
+    <None Include="Service References\Services.Terminal\configuration.svcinfo" />
+    <None Include="Service References\Services.Terminal\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -237,6 +247,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Services.SolicitudServicio\SolicitudServicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services.Terminal\TerminalService.wsdl" />
+    <None Include="Service References\Services.Terminal\TerminalService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services.Terminal\TerminalService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Services.Terminal\TerminalService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">
@@ -351,6 +371,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\Services.Terminal\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -381,6 +406,7 @@
     <WCFMetadataStorage Include="Service References\Services.MotivoSolicitud\" />
     <WCFMetadataStorage Include="Service References\Services.Seguridad\" />
     <WCFMetadataStorage Include="Service References\Services.SolicitudServicio\" />
+    <WCFMetadataStorage Include="Service References\Services.Terminal\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

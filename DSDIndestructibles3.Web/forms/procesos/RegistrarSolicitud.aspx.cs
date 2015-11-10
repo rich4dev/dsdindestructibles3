@@ -19,12 +19,21 @@ namespace DSDIndestructibles3.Web.forms.procesos
 
         private void LoadData()
         {
-            Services.SolicitudServicio.SolicitudServicioClient oClient = new Services.SolicitudServicio.SolicitudServicioClient();
-            Services.SolicitudServicio.SolicitudServicioDTO oSol = new Services.SolicitudServicio.SolicitudServicioDTO();
+            var oMotivoSolicitudServiceClient = new Services.MotivoSolicitud.MotivoSolicitudServiceClient();
+            var oMotSol = new Services.MotivoSolicitud.MotivoSolicitudDTO();
 
-            Services.Cliente.ClienteServiceClient oClienteServiceClient = new Services.Cliente.ClienteServiceClient();
-            Services.Cliente.ClienteDTO oCliente= new Services.Cliente.ClienteDTO();
+            ddlMotSol.DataSource = oMotivoSolicitudServiceClient.GetAll();
+            ddlMotSol.DataTextField = "Descripcion";
+            ddlMotSol.DataValueField = "MotivoSolicitudId";
+            ddlMotSol.DataBind();
 
+            var oClienteServiceClient = new Services.Cliente.ClienteServiceClient();
+            var oCliente= new Services.Cliente.ClienteDTO();
+
+            ddlCli.DataSource = oClienteServiceClient.GetAll();
+            ddlCli.DataTextField = "Descripcion";
+            ddlCli.DataValueField = "ClienteId";
+            ddlCli.DataBind();
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
@@ -33,7 +42,7 @@ namespace DSDIndestructibles3.Web.forms.procesos
             {
                 Services.SolicitudServicio.SolicitudServicioClient oClient = new Services.SolicitudServicio.SolicitudServicioClient();
                 Services.SolicitudServicio.SolicitudServicioDTO oSol = new Services.SolicitudServicio.SolicitudServicioDTO();
-                oSol.ComercioId = int.Parse(ddlCom.SelectedValue);
+                oSol.ComercioId = int.Parse(ddlCli.SelectedValue);
                 oSol.MotivoSolicitudId = int.Parse(ddlMotSol.SelectedValue);
                 oSol.TerminalSolicitadoId = int.Parse(ddlTerSol.SelectedValue);
                 oSol.Estado = ddlEstado.SelectedValue;

@@ -23,7 +23,7 @@
         <tr>
             <td>Comercio:</td>
             <td>
-                <asp:DropDownList ID="ddlCom" runat="server">
+                <asp:DropDownList ID="ddlCli" runat="server">
                 </asp:DropDownList>
             </td>
             <td>&nbsp;</td>
