@@ -32,7 +32,7 @@ namespace DSDIndestructibles3.Datos
             {
                 var entidadSearch = context.SolicitudServicio.Find(entidad.SolicitudServicioId);
                 entidadSearch = Mapper.Map<SolicitudServicio>(entidad);
-                context.Entry(entidadSearch).State = EntityState.Modified; 
+                context.Entry(entidadSearch).State = EntityState.Modified;
                 context.SaveChanges();
             }
         }
@@ -67,14 +67,27 @@ namespace DSDIndestructibles3.Datos
             using (Model1 context =
                new Model1())
             {
-                lista = context.SolicitudServicio
-                    .Where(x => (x.FechaReg >= fechaDesde && x.FechaReg <= fechaHasta) && x.Estado == estado && x.EmpresaId == empresaId)
-                    .Select(x => new SolicitudServicioDTO() 
-                    { 
-                        SolicitudServicioId = x.SolicitudServicioId,
-                        MotivoSolicitudId = (int)x.MotivoSolicitudId,
-                        Estado = x.Estado 
-                    }).ToList();
+                var query = from s in context.SolicitudServicio
+                        join c in context.Cliente on s.ComercioId equals c.ClienteId
+                        where (c.FechaReg >= fechaDesde && c.FechaReg <= fechaHasta) && c.Estado == estado && s.EmpresaId == empresaId
+                        select new SolicitudServicioDTO()
+                                            {
+                                                SolicitudServicioId = s.SolicitudServicioId,
+                                                MotivoSolicitudId = (int)s.MotivoSolicitudId,
+                                                ClienteRuc = c.Ruc,
+                                                ClienteRazonSocial = c.RazonSocial,
+                                                Estado = s.Estado
+                                            };
+                lista = query.ToList();
+
+                //lista = context.SolicitudServicio
+                //    .Where(x => (x.FechaReg >= fechaDesde && x.FechaReg <= fechaHasta) && x.Estado == estado && x.EmpresaId == empresaId)
+                //    .Select(x => new SolicitudServicioDTO()
+                //    {
+                //        SolicitudServicioId = x.SolicitudServicioId,
+                //        MotivoSolicitudId = (int)x.MotivoSolicitudId,
+                //        Estado = x.Estado
+                //    }).ToList();
             }
             return lista;
         }

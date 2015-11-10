@@ -158,7 +158,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Service References\SolicitudServicioServices\DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE.datasource">
+    <Content Include="Service References\SolicitudServicioServices\DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\SolicitudServicioServices\SolicitudServicio.disco" />

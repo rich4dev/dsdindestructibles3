@@ -15,9 +15,9 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SolicitudServicioBE", Namespace="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SolicitudServicioDTO", Namespace="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities")]
     [System.SerializableAttribute()]
-    public partial class SolicitudServicioBE : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class SolicitudServicioDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -29,7 +29,7 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
         private string CapacitadoCargoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime CapacitadoFechaField;
+        private System.Nullable<System.DateTime> CapacitadoFechaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CapacitadoNombresField;
@@ -44,7 +44,7 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
         private string EstadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime FechaModField;
+        private System.Nullable<System.DateTime> FechaModField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime FechaRegField;
@@ -68,13 +68,13 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
         private int SolicitudServicioIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TerminalInstaladoIdField;
+        private System.Nullable<int> TerminalInstaladoIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TerminalSolicitadoIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int UsrModField;
+        private System.Nullable<int> UsrModField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int UsrRegField;
@@ -116,7 +116,7 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime CapacitadoFecha {
+        public System.Nullable<System.DateTime> CapacitadoFecha {
             get {
                 return this.CapacitadoFechaField;
             }
@@ -181,7 +181,7 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FechaMod {
+        public System.Nullable<System.DateTime> FechaMod {
             get {
                 return this.FechaModField;
             }
@@ -285,7 +285,7 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TerminalInstaladoId {
+        public System.Nullable<int> TerminalInstaladoId {
             get {
                 return this.TerminalInstaladoIdField;
             }
@@ -311,7 +311,7 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int UsrMod {
+        public System.Nullable<int> UsrMod {
             get {
                 return this.UsrModField;
             }
@@ -351,16 +351,16 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
     public interface ISolicitudServicio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISolicitudServicio/Registrar", ReplyAction="http://tempuri.org/ISolicitudServicio/RegistrarResponse")]
-        void Registrar(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE oSolicitudServicioBE);
+        void Registrar(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO oSolicitudServicioBE);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISolicitudServicio/Registrar", ReplyAction="http://tempuri.org/ISolicitudServicio/RegistrarResponse")]
-        System.Threading.Tasks.Task RegistrarAsync(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE oSolicitudServicioBE);
+        System.Threading.Tasks.Task RegistrarAsync(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO oSolicitudServicioBE);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISolicitudServicio/Actualizar", ReplyAction="http://tempuri.org/ISolicitudServicio/ActualizarResponse")]
-        void Actualizar(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE oSolicitudServicioBE);
+        void Actualizar(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO oSolicitudServicioBE);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISolicitudServicio/Actualizar", ReplyAction="http://tempuri.org/ISolicitudServicio/ActualizarResponse")]
-        System.Threading.Tasks.Task ActualizarAsync(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE oSolicitudServicioBE);
+        System.Threading.Tasks.Task ActualizarAsync(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO oSolicitudServicioBE);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISolicitudServicio/Eliminar", ReplyAction="http://tempuri.org/ISolicitudServicio/EliminarResponse")]
         void Eliminar(int id);
@@ -369,16 +369,16 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
         System.Threading.Tasks.Task EliminarAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISolicitudServicio/Obtener", ReplyAction="http://tempuri.org/ISolicitudServicio/ObtenerResponse")]
-        DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE Obtener(int id);
+        DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO Obtener(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISolicitudServicio/Obtener", ReplyAction="http://tempuri.org/ISolicitudServicio/ObtenerResponse")]
-        System.Threading.Tasks.Task<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE> ObtenerAsync(int id);
+        System.Threading.Tasks.Task<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO> ObtenerAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISolicitudServicio/ListarBandeja", ReplyAction="http://tempuri.org/ISolicitudServicio/ListarBandejaResponse")]
-        System.Collections.Generic.List<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE> ListarBandeja(System.DateTime fechaDesde, System.DateTime fechaHasta, string estado, int empresaId);
+        System.Collections.Generic.List<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO> ListarBandeja(System.DateTime fechaDesde, System.DateTime fechaHasta, string estado, int empresaId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISolicitudServicio/ListarBandeja", ReplyAction="http://tempuri.org/ISolicitudServicio/ListarBandejaResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE>> ListarBandejaAsync(System.DateTime fechaDesde, System.DateTime fechaHasta, string estado, int empresaId);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO>> ListarBandejaAsync(System.DateTime fechaDesde, System.DateTime fechaHasta, string estado, int empresaId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -408,19 +408,19 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
                 base(binding, remoteAddress) {
         }
         
-        public void Registrar(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE oSolicitudServicioBE) {
+        public void Registrar(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO oSolicitudServicioBE) {
             base.Channel.Registrar(oSolicitudServicioBE);
         }
         
-        public System.Threading.Tasks.Task RegistrarAsync(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE oSolicitudServicioBE) {
+        public System.Threading.Tasks.Task RegistrarAsync(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO oSolicitudServicioBE) {
             return base.Channel.RegistrarAsync(oSolicitudServicioBE);
         }
         
-        public void Actualizar(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE oSolicitudServicioBE) {
+        public void Actualizar(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO oSolicitudServicioBE) {
             base.Channel.Actualizar(oSolicitudServicioBE);
         }
         
-        public System.Threading.Tasks.Task ActualizarAsync(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE oSolicitudServicioBE) {
+        public System.Threading.Tasks.Task ActualizarAsync(DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO oSolicitudServicioBE) {
             return base.Channel.ActualizarAsync(oSolicitudServicioBE);
         }
         
@@ -432,19 +432,19 @@ namespace DSDIndestructibles3.Web.SolicitudServicioServices {
             return base.Channel.EliminarAsync(id);
         }
         
-        public DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE Obtener(int id) {
+        public DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO Obtener(int id) {
             return base.Channel.Obtener(id);
         }
         
-        public System.Threading.Tasks.Task<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE> ObtenerAsync(int id) {
+        public System.Threading.Tasks.Task<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO> ObtenerAsync(int id) {
             return base.Channel.ObtenerAsync(id);
         }
         
-        public System.Collections.Generic.List<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE> ListarBandeja(System.DateTime fechaDesde, System.DateTime fechaHasta, string estado, int empresaId) {
+        public System.Collections.Generic.List<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO> ListarBandeja(System.DateTime fechaDesde, System.DateTime fechaHasta, string estado, int empresaId) {
             return base.Channel.ListarBandeja(fechaDesde, fechaHasta, estado, empresaId);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioBE>> ListarBandejaAsync(System.DateTime fechaDesde, System.DateTime fechaHasta, string estado, int empresaId) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<DSDIndestructibles3.Web.SolicitudServicioServices.SolicitudServicioDTO>> ListarBandejaAsync(System.DateTime fechaDesde, System.DateTime fechaHasta, string estado, int empresaId) {
             return base.Channel.ListarBandejaAsync(fechaDesde, fechaHasta, estado, empresaId);
         }
     }

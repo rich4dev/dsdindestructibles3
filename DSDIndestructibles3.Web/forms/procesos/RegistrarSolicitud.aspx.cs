@@ -11,6 +11,22 @@ namespace DSDIndestructibles3.Web.forms.procesos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                LoadData();
+            }
+        }
+
+        private void LoadData()
+        {
+            
+        
+        }
+
+
+
+        protected void btnRegistrar_Click(object sender, EventArgs e)
+        {
 
         }
     }

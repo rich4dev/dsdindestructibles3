@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <table class="nav-justified">
         <tr>
-            <td class="text-center" colspan="5"><strong>Bandeja de Solicitudes</strong></td>
+            <td class="text-center" colspan="6"><strong>Bandeja de Solicitudes</strong></td>
         </tr>
         <tr>
             <td>Desde:</td>
@@ -13,6 +13,7 @@
             <td>
                 <asp:TextBox ID="txtFecFin" runat="server"></asp:TextBox>
             </td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -27,7 +28,10 @@
             </td>
             <td style="height: 22px"></td>
             <td style="height: 22px"></td>
-            <td style="height: 22px"></td>
+            <td style="height: 22px">
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+            </td>
+            <td style="height: 22px">&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -35,8 +39,10 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
+            <td>&nbsp;</td>
         </tr>
         <tr>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -46,8 +52,10 @@
     </table>
      <script>
   $(function() {
-      $("<%=txtFecIni.ClientID%>").datepicker();
-      $("<%=txtFecFin.ClientID%>").datepicker();
+      $("#<%=txtFecIni.ClientID%>").datepicker();
+      $("#<%=txtFecFin.ClientID%>").datepicker();
+
+      $("#<%=btnBuscar.ClientID%>").button();
   });
   </script>
 </asp:Content>

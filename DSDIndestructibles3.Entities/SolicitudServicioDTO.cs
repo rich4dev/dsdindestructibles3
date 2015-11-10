@@ -13,6 +13,9 @@ namespace DSDIndestructibles3.Entities
         public int SolicitudServicioId { get; set; }
 
         [DataMember]
+        public string Numero { get; set; }
+
+        [DataMember]
         public int ComercioId { get; set; }
 
         [DataMember]
@@ -61,6 +64,13 @@ namespace DSDIndestructibles3.Entities
         public DateTime? FechaMod { get; set; }
         [DataMember]
         public int? UsrMod { get; set; }
+
+
+        [DataMember]
+        public string ClienteRuc { get; set; }
+
+        [DataMember]
+        public string ClienteRazonSocial { get; set; }
 
     }
 }
