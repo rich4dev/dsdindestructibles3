@@ -70,7 +70,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DSDIndestructibles3.Entities\DSDIndestructibles3.Entities.csproj">
+    <ProjectReference Include="..\DSDIndestructibles3.Entities\DSDIndestructibles3.DTO.csproj">
       <Project>{c0c1c19c-c60a-4c83-8bba-14be56159ac5}</Project>
       <Name>DSDIndestructibles3.Entities</Name>
     </ProjectReference>
