@@ -57,7 +57,19 @@
         <tr>
             <td>Modelo POS Instalado:</td>
             <td>
-                <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:ListItem Value="ALL">      -------------------</asp:ListItem>
+                    <asp:ListItem Value="A">DIGI</asp:ListItem>
+                    <asp:ListItem Value="B">ICT250 Dial IP-CTLS</asp:ListItem>
+                    <asp:ListItem Value="C">PAD Externo (i3010)</asp:ListItem>
+                    <asp:ListItem Value="D">PAD Int.Caj (3500)</asp:ListItem>
+                    <asp:ListItem Value="E">PAD Int.Caj (i3070)</asp:ListItem>
+                    <asp:ListItem Value="F">POS Dial Up A (5100)</asp:ListItem>
+                    <asp:ListItem Value="G">POS Dial Up B (Aqua)</asp:ListItem>
+                    <asp:ListItem Value="H">POS IP (5100 IP)</asp:ListItem>
+                    <asp:ListItem Value="I">PP320</asp:ListItem>
+                    <asp:ListItem Value="J">VX520 Dial IP</asp:ListItem>
+                </asp:DropDownList>
             </td>
             <td></td>
             <td></td>
