@@ -2,6 +2,7 @@
 using DSDIndestructibles3.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,39 +11,72 @@ namespace DSDIndestructibles3.Datos
 {
     public class SolicitudServicioData
     {
-        public void Add(SolicitudServicioBE entidad)
+        public void Add(SolicitudServicioDTO entidad)
         {
-            Mapper.CreateMap<SolicitudServicioBE, SolicitudServicio>();
+            Mapper.CreateMap<SolicitudServicioDTO, SolicitudServicio>();
 
-            using (indestructibles3Entities context =
-               new indestructibles3Entities())
+            using (Model1 context =
+               new Model1())
             {
                 var newEntidad = Mapper.Map<SolicitudServicio>(entidad);
                 context.SolicitudServicio.Add(newEntidad);
+                context.SaveChanges();
             }
         }
-        public void Update(SolicitudServicioBE entidad)
+        public void Update(SolicitudServicioDTO entidad)
         {
-            Mapper.CreateMap<SolicitudServicioBE, SolicitudServicio>();
+            Mapper.CreateMap<SolicitudServicioDTO, SolicitudServicio>();
 
-            using (indestructibles3Entities context =
-               new indestructibles3Entities())
+            using (Model1 context =
+               new Model1())
             {
-                var newEntidad = Mapper.Map<SolicitudServicio>(entidad);
-                context.SolicitudServicio.Find(entidad.SolicitudServicioId);
-                context.SolicitudServicio.Attach(newEntidad);
+                var entidadSearch = context.SolicitudServicio.Find(entidad.SolicitudServicioId);
+                entidadSearch = Mapper.Map<SolicitudServicio>(entidad);
+                context.Entry(entidadSearch).State = EntityState.Modified; 
                 context.SaveChanges();
             }
         }
         public void Delete(int id)
         {
-            using (indestructibles3Entities context =
-               new indestructibles3Entities())
+            using (Model1 context =
+               new Model1())
             {
                 var newEntidad = context.SolicitudServicio.Find(id);
                 context.SolicitudServicio.Remove(newEntidad);
                 context.SaveChanges();
             }
+        }
+        public SolicitudServicioDTO Get(int id)
+        {
+            Mapper.CreateMap<SolicitudServicio, SolicitudServicioDTO>();
+            var entidadDTO = new SolicitudServicioDTO();
+            var entidadSearch = new SolicitudServicio();
+            using (Model1 context =
+               new Model1())
+            {
+                entidadSearch = context.SolicitudServicio.Find(id);
+            }
+            entidadDTO = Mapper.Map<SolicitudServicioDTO>(entidadSearch);
+
+            return entidadDTO;
+        }
+        public List<SolicitudServicioDTO> GetBandeja(DateTime fechaDesde, DateTime fechaHasta, string estado, int empresaId)
+        {
+            var lista = new List<SolicitudServicioDTO>();
+            var listaQuery = new object();
+            using (Model1 context =
+               new Model1())
+            {
+                lista = context.SolicitudServicio
+                    .Where(x => (x.FechaReg >= fechaDesde && x.FechaReg <= fechaHasta) && x.Estado == estado && x.EmpresaId == empresaId)
+                    .Select(x => new SolicitudServicioDTO() 
+                    { 
+                        SolicitudServicioId = x.SolicitudServicioId,
+                        MotivoSolicitudId = (int)x.MotivoSolicitudId,
+                        Estado = x.Estado 
+                    }).ToList();
+            }
+            return lista;
         }
     }
 }

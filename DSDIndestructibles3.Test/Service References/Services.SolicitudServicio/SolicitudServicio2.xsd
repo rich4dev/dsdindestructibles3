@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SolicitudServicioBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capacitado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CapacitadoCargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CapacitadoFecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CapacitadoNombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComercioId" type="xs:int" />
+      <xs:element minOccurs="0" name="EmpresaId" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaMod" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaReg" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="MotivoSolicitudId" type="xs:int" />
+      <xs:element minOccurs="0" name="Senalizado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SenalizadoDescripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieFisicoAtn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieVirtualAtn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SolicitudServicioId" type="xs:int" />
+      <xs:element minOccurs="0" name="TerminalInstaladoId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TerminalSolicitadoId" type="xs:int" />
+      <xs:element minOccurs="0" name="UsrMod" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="UsrReg" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SolicitudServicioBE" nillable="true" type="tns:SolicitudServicioBE" />
+  <xs:complexType name="ArrayOfSolicitudServicioBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SolicitudServicioBE" nillable="true" type="tns:SolicitudServicioBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSolicitudServicioBE" nillable="true" type="tns:ArrayOfSolicitudServicioBE" />
+</xs:schema>

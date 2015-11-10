@@ -8,13 +8,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.Web", "
 		{130EC5DE-1AAE-4E50-B6D6-42B8194EA4F5} = {130EC5DE-1AAE-4E50-B6D6-42B8194EA4F5}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.Entities", "DSDIndestructibles3.Entities\DSDIndestructibles3.Entities.csproj", "{C0C1C19C-C60A-4C83-8BBA-14BE56159AC5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.DTO", "DSDIndestructibles3.Entities\DSDIndestructibles3.DTO.csproj", "{C0C1C19C-C60A-4C83-8BBA-14BE56159AC5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.Data", "DSDIndestructibles3.Data\DSDIndestructibles3.Data.csproj", "{5FE3008D-8255-4E7F-AB30-94634B139B47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.Service", "DSDIndestructibles3.Service\DSDIndestructibles3.Service.csproj", "{130EC5DE-1AAE-4E50-B6D6-42B8194EA4F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.Datos", "DSDIndestructibles3.Datos\DSDIndestructibles3.Datos.csproj", "{61FB6F63-E9B9-4BAC-8B0F-048C62330DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.Test", "DSDIndestructibles3.Test\DSDIndestructibles3.Test.csproj", "{D946EDE3-4069-457F-AA56-EA0B38B15628}"
+	ProjectSection(ProjectDependencies) = postProject
+		{130EC5DE-1AAE-4E50-B6D6-42B8194EA4F5} = {130EC5DE-1AAE-4E50-B6D6-42B8194EA4F5}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +47,10 @@ Global
 		{61FB6F63-E9B9-4BAC-8B0F-048C62330DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61FB6F63-E9B9-4BAC-8B0F-048C62330DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61FB6F63-E9B9-4BAC-8B0F-048C62330DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D946EDE3-4069-457F-AA56-EA0B38B15628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D946EDE3-4069-457F-AA56-EA0B38B15628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D946EDE3-4069-457F-AA56-EA0B38B15628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D946EDE3-4069-457F-AA56-EA0B38B15628}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

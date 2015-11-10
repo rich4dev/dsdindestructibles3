@@ -117,6 +117,7 @@
     <Content Include="forms\procesos\EvaluarRiesgoFraude.aspx" />
     <Content Include="forms\procesos\ProgramarInstalacion.aspx" />
     <Content Include="forms\procesos\RegistrarInstalacion.aspx" />
+    <Content Include="forms\procesos\RegistrarSolicitud.aspx" />
     <Content Include="forms\procesos\SolicitarInstalacion.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="packages.config" />
@@ -241,6 +242,13 @@
     </Compile>
     <Compile Include="forms\procesos\RegistrarInstalacion.aspx.designer.cs">
       <DependentUpon>RegistrarInstalacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\procesos\RegistrarSolicitud.aspx.cs">
+      <DependentUpon>RegistrarSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\procesos\RegistrarSolicitud.aspx.designer.cs">
+      <DependentUpon>RegistrarSolicitud.aspx</DependentUpon>
     </Compile>
     <Compile Include="forms\procesos\SolicitarInstalacion.aspx.cs">
       <DependentUpon>SolicitarInstalacion.aspx</DependentUpon>

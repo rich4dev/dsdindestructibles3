@@ -24,30 +24,30 @@ namespace DSDIndestructibles3.Service
                 return solicitudServicioDAO;
             }
         }
-        public void Registrar(Entities.SolicitudServicioBE oSolicitudServicioBE)
+        public void Registrar(Entities.SolicitudServicioDTO oSolicitudServicioBE)
         {
             SolicitudServicioDAO.Add(oSolicitudServicioBE);
         }
 
-        public void Actualizar(Entities.SolicitudServicioBE oSolicitudServicioBE)
+        public void Actualizar(Entities.SolicitudServicioDTO oSolicitudServicioBE)
         {
-            //SolicitudServicioDAO.Modificar(oSolicitudServicioBE);
+            SolicitudServicioDAO.Update(oSolicitudServicioBE);
         }
 
         public void Eliminar(int id)
         {
             //SolicitudServicioBE oSolicitudServicioBE = SolicitudServicioDAO.Obtener(id);
-            //SolicitudServicioDAO.Eliminar(oSolicitudServicioBE);
+            SolicitudServicioDAO.Delete(id);
         }
 
-        public List<Entities.SolicitudServicioBE> ListarBandeja(DateTime fechaDesde, DateTime fechaHasta, string estado, int empresaId)
+        public List<Entities.SolicitudServicioDTO> ListarBandeja(DateTime fechaDesde, DateTime fechaHasta, string estado, int empresaId)
         {
-            return null; //(List<Entities.SolicitudServicioBE>)SolicitudServicioDAO.ListarBandeja(fechaDesde, fechaHasta, estado, empresaId);
+            return SolicitudServicioDAO.GetBandeja( fechaDesde,   fechaHasta,   estado,   empresaId);
         }
 
-        public Entities.SolicitudServicioBE Obtener(int id)
+        public Entities.SolicitudServicioDTO Obtener(int id)
         {
-            return null; // SolicitudServicioDAO.Obtener(id);
+            return SolicitudServicioDAO.Get(id);
         }
 
     }

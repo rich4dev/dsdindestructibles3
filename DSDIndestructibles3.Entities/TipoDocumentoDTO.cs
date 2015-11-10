@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 namespace DSDIndestructibles3.Entities
 {
     [DataContract]
-    public class TipoDocumentoBE
+    public class TipoDocumentoDTO
     {
         int tipodocumentoid;
         string descripcion;
@@ -15,7 +15,7 @@ namespace DSDIndestructibles3.Entities
         DateTime fechamod;
         int usrmod;
 
-        public TipoDocumentoBE()
+        public TipoDocumentoDTO()
         {
 
         }

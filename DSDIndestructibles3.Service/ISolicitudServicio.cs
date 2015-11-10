@@ -13,15 +13,15 @@ namespace DSDIndestructibles3.Service
     public interface ISolicitudServicio
     {
         [OperationContract]
-        void Registrar(SolicitudServicioBE oSolicitudServicioBE);
+        void Registrar(SolicitudServicioDTO oSolicitudServicioBE);
         [OperationContract]
-        void Actualizar(SolicitudServicioBE oSolicitudServicioBE);
+        void Actualizar(SolicitudServicioDTO oSolicitudServicioBE);
         [OperationContract]
         void Eliminar(int id);
         [OperationContract]
-        SolicitudServicioBE Obtener(int id);
+        SolicitudServicioDTO Obtener(int id);
         [OperationContract]
-        List<SolicitudServicioBE> ListarBandeja(DateTime fechaDesde, DateTime fechaHasta, string estado, int empresaId);
+        List<SolicitudServicioDTO> ListarBandeja(DateTime fechaDesde, DateTime fechaHasta, string estado, int empresaId);
 
     }
 }

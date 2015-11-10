@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 namespace DSDIndestructibles3.Entities
 {
     [DataContract]
-    public class UsuarioBE
+    public class UsuarioDTO
     {
         int usuarioid;
         string nombres;
@@ -21,7 +21,7 @@ namespace DSDIndestructibles3.Entities
         DateTime fechamod;
         int usrmod;
 
-        public UsuarioBE()
+        public UsuarioDTO()
         {
 
         }

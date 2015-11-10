@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 namespace DSDIndestructibles3.Entities
 {
     [DataContract]
-    public class TerminalBE
+    public class TerminalDTO
     {
         int terminalid;
         string tipo;
@@ -18,7 +18,7 @@ namespace DSDIndestructibles3.Entities
         DateTime fechamod;
         int usrmod;
 
-        public TerminalBE()
+        public TerminalDTO()
         {
 
         }

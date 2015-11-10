@@ -6,12 +6,8 @@ using System.Runtime.Serialization;
 namespace DSDIndestructibles3.Entities
 {
     [DataContract]
-    public class SolicitudServicioBE
+    public class SolicitudServicioDTO
     {
-        public SolicitudServicioBE()
-        {
-
-        }
 
         [DataMember]
         public int SolicitudServicioId { get; set; }
@@ -26,7 +22,7 @@ namespace DSDIndestructibles3.Entities
         public int TerminalSolicitadoId { get; set; }
 
         [DataMember]
-        public int TerminalInstaladoId { get; set; }
+        public int? TerminalInstaladoId { get; set; }
 
         [DataMember]
         public string SerieFisicoAtn { get; set; }
@@ -44,7 +40,7 @@ namespace DSDIndestructibles3.Entities
         public string CapacitadoCargo { get; set; }
 
         [DataMember]
-        public DateTime CapacitadoFecha { get; set; }
+        public DateTime? CapacitadoFecha { get; set; }
 
         [DataMember]
         public string Senalizado { get; set; }
@@ -62,9 +58,9 @@ namespace DSDIndestructibles3.Entities
         [DataMember]
         public int UsrReg { get; set; }
         [DataMember]
-        public DateTime FechaMod { get; set; }
+        public DateTime? FechaMod { get; set; }
         [DataMember]
-        public int UsrMod { get; set; }
+        public int? UsrMod { get; set; }
 
     }
 }

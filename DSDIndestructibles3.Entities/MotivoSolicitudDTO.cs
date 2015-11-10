@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 namespace DSDIndestructibles3.Entities
 {
     [DataContract]
-    public class MotivoSolicitudBE
+    public class MotivoSolicitudDTO
     {
         int motivosolicitudid;
         string descripcion;
@@ -16,7 +16,7 @@ namespace DSDIndestructibles3.Entities
         DateTime fechamod;
         int usrmod;
 
-        public MotivoSolicitudBE()
+        public MotivoSolicitudDTO()
         {
 
         }

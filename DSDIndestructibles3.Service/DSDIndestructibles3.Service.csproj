@@ -100,9 +100,9 @@
       <Project>{61fb6f63-e9b9-4bac-8b0f-048c62330ded}</Project>
       <Name>DSDIndestructibles3.Datos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DSDIndestructibles3.Entities\DSDIndestructibles3.Entities.csproj">
+    <ProjectReference Include="..\DSDIndestructibles3.Entities\DSDIndestructibles3.DTO.csproj">
       <Project>{c0c1c19c-c60a-4c83-8bba-14be56159ac5}</Project>
-      <Name>DSDIndestructibles3.Entities</Name>
+      <Name>DSDIndestructibles3.DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
