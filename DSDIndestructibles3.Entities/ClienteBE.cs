@@ -23,7 +23,7 @@ namespace DSDIndestructibles3.Entities
         public string Ruc { get; set; }
 
         [DataMember] 
-        public string Razonsocial { get; set; }
+        public string RazonSocial { get; set; }
 
         [DataMember] 
         public string Direccion { get; set; }
@@ -32,7 +32,7 @@ namespace DSDIndestructibles3.Entities
         public string Contacto { get; set; }
 
         [DataMember] 
-        public int Ubigeoid { get; set; } 
+        public int UbigeoId { get; set; } 
         [DataMember]
         public string Estado { get; set; }
         [DataMember]

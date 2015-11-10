@@ -21,7 +21,7 @@ namespace DSDIndestructibles3.Entities
         }
 
         [DataMember] 
-        public virtual int Tipodocumentoid
+        public virtual int TipoDocumentoId
         {
             get { return tipodocumentoid; }
             set { tipodocumentoid = value; }
@@ -34,62 +34,35 @@ namespace DSDIndestructibles3.Entities
             set { descripcion = value; }
         }
 
+        [DataMember]
+        public string Estado { get; set; }
+
         [DataMember] 
-        public virtual DateTime Fechareg
+        public virtual DateTime FechaReg
         {
             get { return fechareg; }
             set { fechareg = value; }
         }
 
         [DataMember] 
-        public virtual int Usrreg
+        public virtual int UsrReg
         {
             get { return usrreg; }
             set { usrreg = value; }
         }
 
         [DataMember] 
-        public virtual DateTime Fechamod
+        public virtual DateTime FechaMod
         {
             get { return fechamod; }
             set { fechamod = value; }
         }
 
         [DataMember] 
-        public virtual int Usrmod
+        public virtual int UsrMod
         {
             get { return usrmod; }
             set { usrmod = value; }
-        }
-
-        public override string ToString()
-        {
-            String s = "";
-            if (tipodocumentoid != null)
-                s += "tipodocumentoid : " + tipodocumentoid.ToString() + "\n";
-            else
-                s += "tipodocumentoid : null\n";
-            if (descripcion != null)
-                s += "descripcion : " + descripcion.ToString() + "\n";
-            else
-                s += "descripcion : null\n";
-            if (fechareg != null)
-                s += "fechareg : " + fechareg.ToString() + "\n";
-            else
-                s += "fechareg : null\n";
-            if (usrreg != null)
-                s += "usrreg : " + usrreg.ToString() + "\n";
-            else
-                s += "usrreg : null\n";
-            if (fechamod != null)
-                s += "fechamod : " + fechamod.ToString() + "\n";
-            else
-                s += "fechamod : null\n";
-            if (usrmod != null)
-                s += "usrmod : " + usrmod.ToString() + "\n";
-            else
-                s += "usrmod : null\n";
-            return s;
         }
 
 

@@ -27,7 +27,7 @@ namespace DSDIndestructibles3.Entities
         }
 
         [DataMember] 
-        public virtual int Usuarioid
+        public virtual int UsuarioId
         {
             get { return usuarioid; }
             set { usuarioid = value; }
@@ -55,14 +55,14 @@ namespace DSDIndestructibles3.Entities
         }
 
         [DataMember] 
-        public virtual int Tipodocumentoid
+        public virtual int TipoDocumentoId
         {
             get { return tipodocumentoid; }
             set { tipodocumentoid = value; }
         }
 
         [DataMember] 
-        public virtual string Numerodocumento
+        public virtual string NumeroDocumento
         {
             get { return numerodocumento; }
             set { numerodocumento = value; }
@@ -76,7 +76,7 @@ namespace DSDIndestructibles3.Entities
         }
 
         [DataMember] 
-        public virtual int Perfilid
+        public virtual int PerfilId
         {
             get { return perfilid; }
             set { perfilid = value; }
@@ -90,90 +90,33 @@ namespace DSDIndestructibles3.Entities
         }
 
         [DataMember] 
-        public virtual DateTime Fechareg
+        public virtual DateTime FechaReg
         {
             get { return fechareg; }
             set { fechareg = value; }
         }
 
         [DataMember] 
-        public virtual int Usrreg
+        public virtual int UsrReg
         {
             get { return usrreg; }
             set { usrreg = value; }
         }
 
         [DataMember] 
-        public virtual DateTime Fechamod
+        public virtual DateTime FechaMod
         {
             get { return fechamod; }
             set { fechamod = value; }
         }
 
         [DataMember] 
-        public virtual int Usrmod
+        public virtual int UsrMod
         {
             get { return usrmod; }
             set { usrmod = value; }
         }
 
-        public override string ToString()
-        {
-            String s = "";
-            if (usuarioid != null)
-                s += "usuarioid : " + usuarioid.ToString() + "\n";
-            else
-                s += "usuarioid : null\n";
-            if (nombres != null)
-                s += "nombres : " + nombres.ToString() + "\n";
-            else
-                s += "nombres : null\n";
-            if (apellidos != null)
-                s += "apellidos : " + apellidos.ToString() + "\n";
-            else
-                s += "apellidos : null\n";
-            if (login != null)
-                s += "login : " + login.ToString() + "\n";
-            else
-                s += "login : null\n";
-            if (tipodocumentoid != null)
-                s += "tipodocumentoid : " + tipodocumentoid.ToString() + "\n";
-            else
-                s += "tipodocumentoid : null\n";
-            if (numerodocumento != null)
-                s += "numerodocumento : " + numerodocumento.ToString() + "\n";
-            else
-                s += "numerodocumento : null\n";
-            if (clave != null)
-                s += "clave : " + clave.ToString() + "\n";
-            else
-                s += "clave : null\n";
-            if (perfilid != null)
-                s += "perfilid : " + perfilid.ToString() + "\n";
-            else
-                s += "perfilid : null\n";
-            if (estado != null)
-                s += "estado : " + estado.ToString() + "\n";
-            else
-                s += "estado : null\n";
-            if (fechareg != null)
-                s += "fechareg : " + fechareg.ToString() + "\n";
-            else
-                s += "fechareg : null\n";
-            if (usrreg != null)
-                s += "usrreg : " + usrreg.ToString() + "\n";
-            else
-                s += "usrreg : null\n";
-            if (fechamod != null)
-                s += "fechamod : " + fechamod.ToString() + "\n";
-            else
-                s += "fechamod : null\n";
-            if (usrmod != null)
-                s += "usrmod : " + usrmod.ToString() + "\n";
-            else
-                s += "usrmod : null\n";
-            return s;
-        }
 
 
     }

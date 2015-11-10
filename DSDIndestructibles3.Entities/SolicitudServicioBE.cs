@@ -8,242 +8,63 @@ namespace DSDIndestructibles3.Entities
     [DataContract]
     public class SolicitudServicioBE
     {
-        int solicitudservicioid;
-        int comercioid;
-        int motivosolicitudid;
-        int terminalsolicitadoid;
-        int terminalinstalado;
-        string seriefisicoatn;
-        string serievirtualatn;
-        String capacitado;
-        string capacitadonombres;
-        string capacitadocargo;
-        DateTime capacitadofecha;
-        String senalizado;
-        string senalizadodescripcion;
-        String estado;
-        int empresaId;
-        DateTime fechareg;
-        int usrreg;
-        DateTime fechamod;
-        int usrmod;
-
         public SolicitudServicioBE()
         {
 
         }
 
-        [DataMember] 
-        public virtual int SolicitudServicioId
-        {
-            get { return solicitudservicioid; }
-            set { solicitudservicioid = value; }
-        }
-
-        [DataMember] 
-        public virtual int ComercioId
-        {
-            get { return comercioid; }
-            set { comercioid = value; }
-        }
-
-        [DataMember] 
-        public virtual int MotivoSolicitudId
-        {
-            get { return motivosolicitudid; }
-            set { motivosolicitudid = value; }
-        }
-
-        [DataMember] 
-        public virtual int TerminalSolicitadoId
-        {
-            get { return terminalsolicitadoid; }
-            set { terminalsolicitadoid = value; }
-        }
-
-        [DataMember] 
-        public virtual int TerminalInstalado
-        {
-            get { return terminalinstalado; }
-            set { terminalinstalado = value; }
-        }
-
-        [DataMember] 
-        public virtual string SerieFisicoAtn
-        {
-            get { return seriefisicoatn; }
-            set { seriefisicoatn = value; }
-        }
-
-        [DataMember] 
-        public virtual string SerieVirtualAtn
-        {
-            get { return serievirtualatn; }
-            set { serievirtualatn = value; }
-        }
-
-        [DataMember] 
-        public virtual String Capacitado
-        {
-            get { return capacitado; }
-            set { capacitado = value; }
-        }
-
-        [DataMember] 
-        public virtual string CapacitadoNombres
-        {
-            get { return capacitadonombres; }
-            set { capacitadonombres = value; }
-        }
-
-        [DataMember] 
-        public virtual string CapacitadoCargo
-        {
-            get { return capacitadocargo; }
-            set { capacitadocargo = value; }
-        }
-
-        [DataMember] 
-        public virtual DateTime CapacitadoFecha
-        {
-            get { return capacitadofecha; }
-            set { capacitadofecha = value; }
-        }
-
-        [DataMember] 
-        public virtual String Senalizado
-        {
-            get { return senalizado; }
-            set { senalizado = value; }
-        }
-
-        [DataMember] 
-        public virtual string SenalizadoDescripcion
-        {
-            get { return senalizadodescripcion; }
-            set { senalizadodescripcion = value; }
-        }
+        [DataMember]
+        public int SolicitudServicioId { get; set; }
 
         [DataMember]
-        public virtual String Estado
-        {
-            get { return estado; }
-            set { estado = value; }
-        }
+        public int ComercioId { get; set; }
 
         [DataMember]
-        public virtual int EmpresaId
-        {
-            get { return empresaId; }
-            set { empresaId = value; }
-        }
+        public int MotivoSolicitudId { get; set; }
 
-        [DataMember] 
-        public virtual DateTime FechaReg
-        {
-            get { return fechareg; }
-            set { fechareg = value; }
-        }
+        [DataMember]
+        public int TerminalSolicitadoId { get; set; }
 
-        [DataMember] 
-        public virtual int UsrReg
-        {
-            get { return usrreg; }
-            set { usrreg = value; }
-        }
+        [DataMember]
+        public int TerminalInstaladoId { get; set; }
 
-        [DataMember] 
-        public virtual DateTime FechaMod
-        {
-            get { return fechamod; }
-            set { fechamod = value; }
-        }
+        [DataMember]
+        public string SerieFisicoAtn { get; set; }
 
-        [DataMember] 
-        public virtual int UsrMod
-        {
-            get { return usrmod; }
-            set { usrmod = value; }
-        }
+        [DataMember]
+        public string SerieVirtualAtn { get; set; }
 
-        public override string ToString()
-        {
-            String s = "";
-            if (solicitudservicioid != null)
-                s += "solicitudservicioid : " + solicitudservicioid.ToString() + "\n";
-            else
-                s += "solicitudservicioid : null\n";
-            if (comercioid != null)
-                s += "comercioid : " + comercioid.ToString() + "\n";
-            else
-                s += "comercioid : null\n";
-            if (motivosolicitudid != null)
-                s += "motivosolicitudid : " + motivosolicitudid.ToString() + "\n";
-            else
-                s += "motivosolicitudid : null\n";
-            if (terminalsolicitadoid != null)
-                s += "terminalsolicitadoid : " + terminalsolicitadoid.ToString() + "\n";
-            else
-                s += "terminalsolicitadoid : null\n";
-            if (terminalinstalado != null)
-                s += "terminalinstalado : " + terminalinstalado.ToString() + "\n";
-            else
-                s += "terminalinstalado : null\n";
-            if (seriefisicoatn != null)
-                s += "seriefisicoatn : " + seriefisicoatn.ToString() + "\n";
-            else
-                s += "seriefisicoatn : null\n";
-            if (serievirtualatn != null)
-                s += "serievirtualatn : " + serievirtualatn.ToString() + "\n";
-            else
-                s += "serievirtualatn : null\n";
-            if (capacitado != null)
-                s += "capacitado : " + capacitado.ToString() + "\n";
-            else
-                s += "capacitado : null\n";
-            if (capacitadonombres != null)
-                s += "capacitadonombres : " + capacitadonombres.ToString() + "\n";
-            else
-                s += "capacitadonombres : null\n";
-            if (capacitadocargo != null)
-                s += "capacitadocargo : " + capacitadocargo.ToString() + "\n";
-            else
-                s += "capacitadocargo : null\n";
-            if (capacitadofecha != null)
-                s += "capacitadofecha : " + capacitadofecha.ToString() + "\n";
-            else
-                s += "capacitadofecha : null\n";
-            if (senalizado != null)
-                s += "senalizado : " + senalizado.ToString() + "\n";
-            else
-                s += "senalizado : null\n";
-            if (senalizadodescripcion != null)
-                s += "senalizadodescripcion : " + senalizadodescripcion.ToString() + "\n";
-            else
-                s += "senalizadodescripcion : null\n";
-            if (estado != null)
-                s += "estado : " + estado.ToString() + "\n";
-            else
-                s += "estado : null\n";
-            if (fechareg != null)
-                s += "fechareg : " + fechareg.ToString() + "\n";
-            else
-                s += "fechareg : null\n";
-            if (usrreg != null)
-                s += "usrreg : " + usrreg.ToString() + "\n";
-            else
-                s += "usrreg : null\n";
-            if (fechamod != null)
-                s += "fechamod : " + fechamod.ToString() + "\n";
-            else
-                s += "fechamod : null\n";
-            if (usrmod != null)
-                s += "usrmod : " + usrmod.ToString() + "\n";
-            else
-                s += "usrmod : null\n";
-            return s;
-        }
+        [DataMember]
+        public string Capacitado { get; set; }
 
+        [DataMember]
+        public string CapacitadoNombres { get; set; }
+
+        [DataMember]
+        public string CapacitadoCargo { get; set; }
+
+        [DataMember]
+        public DateTime CapacitadoFecha { get; set; }
+
+        [DataMember]
+        public string Senalizado { get; set; }
+
+        [DataMember]
+        public string SenalizadoDescripcion { get; set; }
+
+        [DataMember]
+        public string Estado { get; set; }
+
+        [DataMember]
+        public int EmpresaId { get; set; }
+        [DataMember]
+        public DateTime FechaReg { get; set; }
+        [DataMember]
+        public int UsrReg { get; set; }
+        [DataMember]
+        public DateTime FechaMod { get; set; }
+        [DataMember]
+        public int UsrMod { get; set; }
 
     }
 }
