@@ -95,4 +95,11 @@
             <td>&nbsp;</td>
         </tr>
     </table>
+    <script>
+  $(function() {
+      $("#<%=txtFecSol.ClientID%>").datepicker();
+      $("#<%=btnRegistrar.ClientID%>").button();
+      $("#<%=btnCancelar.ClientID%>").button();
+  });
+  </script>
 </asp:Content>

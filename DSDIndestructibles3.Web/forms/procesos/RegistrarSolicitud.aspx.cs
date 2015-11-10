@@ -19,14 +19,31 @@ namespace DSDIndestructibles3.Web.forms.procesos
 
         private void LoadData()
         {
-            
+            SolicitudServicioServices.SolicitudServicioClient oClient = new SolicitudServicioServices.SolicitudServicioClient();
+            SolicitudServicioServices.SolicitudServicioDTO oSol = new SolicitudServicioServices.SolicitudServicioDTO();
+
         
         }
 
-
-
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                SolicitudServicioServices.SolicitudServicioClient oClient = new SolicitudServicioServices.SolicitudServicioClient();
+                SolicitudServicioServices.SolicitudServicioDTO oSol = new SolicitudServicioServices.SolicitudServicioDTO();
+                oSol.ComercioId = int.Parse(ddlCom.SelectedValue);
+                oSol.MotivoSolicitudId = int.Parse(ddlMotSol.SelectedValue);
+                oSol.TerminalSolicitadoId = int.Parse(ddlTerSol.SelectedValue);
+                oSol.Estado = ddlEstado.SelectedValue;
+                oSol.UsrReg = MySession.UserId;
+                oClient.Registrar(oSol);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+            
 
         }
     }
