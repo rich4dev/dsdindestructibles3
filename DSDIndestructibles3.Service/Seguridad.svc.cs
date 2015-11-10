@@ -10,8 +10,7 @@ namespace DSDIndestructibles3.Service
  
     public class Seguridad : ISeguridad
     {
-
-        public void DoWork()
+        public void Login(string username, string clave)
         {
             throw new NotImplementedException();
         }

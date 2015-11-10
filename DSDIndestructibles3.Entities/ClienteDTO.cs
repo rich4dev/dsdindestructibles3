@@ -8,10 +8,6 @@ namespace DSDIndestructibles3.Entities
     [DataContract]
     public class ClienteDTO
     {
-        public ClienteDTO()
-        {
-
-        }
 
         [DataMember]
         public int ClienteId { get; set; }

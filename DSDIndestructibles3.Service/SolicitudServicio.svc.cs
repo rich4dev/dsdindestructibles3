@@ -34,7 +34,6 @@ namespace DSDIndestructibles3.Service
 
         public void Eliminar(int id)
         {
-            //SolicitudServicioBE oSolicitudServicioBE = SolicitudServicioDAO.Obtener(id);
             SolicitudServicioDAO.Delete(id);
         }
 

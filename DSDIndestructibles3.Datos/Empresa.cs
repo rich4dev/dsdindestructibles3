@@ -9,6 +9,7 @@ namespace DSDIndestructibles3.Datos
     [Table("Empresa")]
     public partial class Empresa
     {
+        //datos
         public int EmpresaId { get; set; }
 
         [StringLength(50)]

@@ -4,7 +4,7 @@
   <xs:element name="Registrar">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities" minOccurs="0" name="oSolicitudServicioBE" nillable="true" type="q1:SolicitudServicioBE" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities" minOccurs="0" name="oSolicitudServicioBE" nillable="true" type="q1:SolicitudServicioDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -16,7 +16,7 @@
   <xs:element name="Actualizar">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities" minOccurs="0" name="oSolicitudServicioBE" nillable="true" type="q2:SolicitudServicioBE" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities" minOccurs="0" name="oSolicitudServicioBE" nillable="true" type="q2:SolicitudServicioDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -47,7 +47,7 @@
   <xs:element name="ObtenerResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities" minOccurs="0" name="ObtenerResult" nillable="true" type="q3:SolicitudServicioBE" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities" minOccurs="0" name="ObtenerResult" nillable="true" type="q3:SolicitudServicioDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -64,7 +64,7 @@
   <xs:element name="ListarBandejaResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities" minOccurs="0" name="ListarBandejaResult" nillable="true" type="q4:ArrayOfSolicitudServicioBE" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Entities" minOccurs="0" name="ListarBandejaResult" nillable="true" type="q4:ArrayOfSolicitudServicioDTO" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

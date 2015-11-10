@@ -12,6 +12,6 @@ namespace DSDIndestructibles3.Service
     public interface ISeguridad
     {
         [OperationContract]
-        void DoWork();
+        void Login(string username, string clave);
     }
 }
