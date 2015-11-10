@@ -132,10 +132,12 @@
             <td></td>
             <td></td>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Cancelar" />
+                <!--<asp:Button ID="Button1" runat="server" Text="Cancelar" />-->
+                <input id="Button1" type="button" value="Cancelar"  OnClick="ShowPopup();"/>
             </td>
             <td>
-                <asp:Button ID="Button2" runat="server" Text="Guardar" />
+                <!--<asp:Button ID="Button2" runat="server" Text="Guardar" />-->
+                <input id="Button2" type="button" value="Guardar"  OnClick="ShowPopup();"/>
             </td>
             <td></td>
         </tr>
@@ -148,4 +150,91 @@
             <td></td>
         </tr>
     </table>
+
+       <div id="popup" style="display: none;">
+           <td>Esta Seguro que no se ha instalado el POS?</td>
+        <table>
+            
+            <tr>
+               
+            </tr>
+        </table>
+
+    </div>
+       <div id="popup1" style="display: none;">
+           <td>Esta Seguro que no se ha señalizado el Comercio?</td>
+        <table>
+            
+            <tr>
+                <td></td>
+                    <td>Existe Señalizacion     :</td>
+                <td>
+                    <asp:CheckBox ID="CheckBox2" runat="server" Text="Ok" />
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                 <td></td>
+            <td>Falta de Espacio        :</td>
+            <td>
+                <asp:CheckBox ID="CheckBox3" runat="server" Text="Ok" />
+            </td>
+            <td></td>
+            </tr>
+            <tr>
+                 <td></td>
+            <td>Rechazado por el Cliente        :</td>
+            <td>
+                <asp:CheckBox ID="CheckBox4" runat="server" Text="Ok" />
+            </td>
+            <td></td>
+            </tr>
+               
+            
+        </table>
+
+    </div>
+    <script>
+        function ShowPopup() {
+            if (RadioButtonList = "No") {
+                $("#popup").show();
+                $("#popup").dialog({
+                    //autoOpen: false,
+                    height: 200,
+                    width: 390,
+                    modal: true,
+                    buttons: {
+                        Si: function () {
+                            ShowPopup1()
+
+                        },
+                        No: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+                return false;
+            }
+        }
+    </script>
+    <script>
+        function ShowPopup1() {
+            $("#popup1").show();
+            $("#popup1").dialog({
+                //autoOpen: false,
+                height: 250,
+                width: 450,
+                modal: true,
+                buttons: {
+                    Guardar: function () {
+                        $(this).dialog("close");
+                    },
+                    Cerrar: function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            return false;
+        }
+    </script>
 </asp:Content>
