@@ -114,9 +114,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="forms\procesos\BandejaSolicitud.aspx" />
+    <Content Include="forms\procesos\DigitarSolicitud.aspx" />
     <Content Include="forms\procesos\EntregarKit.aspx" />
     <Content Include="forms\procesos\EvaluarRiesgoFraude.aspx" />
     <Content Include="forms\procesos\ProgramarInstalacion.aspx" />
+    <Content Include="forms\procesos\RegistrarInspeccion.aspx" />
     <Content Include="forms\procesos\RegistrarInstalacion.aspx" />
     <Content Include="forms\procesos\RegistrarSolicitud.aspx" />
     <Content Include="forms\procesos\SolicitarInstalacion.aspx" />
@@ -297,6 +299,13 @@
     <Compile Include="forms\procesos\BandejaSolicitud.aspx.designer.cs">
       <DependentUpon>BandejaSolicitud.aspx</DependentUpon>
     </Compile>
+    <Compile Include="forms\procesos\DigitarSolicitud.aspx.cs">
+      <DependentUpon>DigitarSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\procesos\DigitarSolicitud.aspx.designer.cs">
+      <DependentUpon>DigitarSolicitud.aspx</DependentUpon>
+    </Compile>
     <Compile Include="forms\procesos\EntregarKit.aspx.cs">
       <DependentUpon>EntregarKit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -317,6 +326,13 @@
     </Compile>
     <Compile Include="forms\procesos\ProgramarInstalacion.aspx.designer.cs">
       <DependentUpon>ProgramarInstalacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\procesos\RegistrarInspeccion.aspx.cs">
+      <DependentUpon>RegistrarInspeccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\procesos\RegistrarInspeccion.aspx.designer.cs">
+      <DependentUpon>RegistrarInspeccion.aspx</DependentUpon>
     </Compile>
     <Compile Include="forms\procesos\RegistrarInstalacion.aspx.cs">
       <DependentUpon>RegistrarInstalacion.aspx</DependentUpon>

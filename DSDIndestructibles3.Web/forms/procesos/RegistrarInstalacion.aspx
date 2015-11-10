@@ -2,6 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <table>
         <tr>
+            <td colspan="6" style="text-align: center; font-weight: 700">Registrar Instalación</td>
+        </tr>
+        <tr>
             <td>Id Cliente:</td>
             <td>
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
@@ -123,7 +126,7 @@
                 <asp:Button ID="Button1" runat="server" Text="Cancelar" />
             </td>
             <td>
-                <asp:Button ID="Button2" runat="server" Text="Guardar" />
+                <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClientClick="if (!confirm('Esta seguro que desea registrar la solicitud?')){ return false;} else { ShowPopup(); return false;}" />
             </td>
             <td></td>
         </tr>
@@ -136,4 +139,55 @@
             <td></td>
         </tr>
     </table>
+        <div id="popup" style="display: none;">
+        <table>
+            <tr>
+                <td>
+                    Existe señalización:
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox2" runat="server" Text="Ok" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Falta de espacio:
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox3" runat="server" Text="Ok" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Rechazado por el cliente:
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox4" runat="server" Text="Ok" />
+                </td>
+            </tr>
+        </table>
+
+    </div>
+        <script>
+        function ShowPopup() {
+            $("#popup").show();
+            $("#popup").dialog({
+                //autoOpen: false,
+                title: "Esta seguro que no se ha señalizado el comercio?",
+                height: 300,
+                width: 350,
+                modal: true,
+                buttons: {
+                    Si: function () {
+                        $(this).dialog("close");
+                    },
+                    No: function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            return false;
+        }
+    </script>
+
 </asp:Content>
