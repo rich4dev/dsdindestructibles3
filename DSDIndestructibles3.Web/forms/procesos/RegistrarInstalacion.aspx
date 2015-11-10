@@ -58,7 +58,7 @@
             <td>Modelo POS Instalado:</td>
             <td>
                 <asp:DropDownList ID="DropDownList1" runat="server">
-                    <asp:ListItem Value="ALL">      -------------------</asp:ListItem>
+                    <asp:ListItem Value="ALL">      --------------------------</asp:ListItem>
                     <asp:ListItem Value="A">DIGI</asp:ListItem>
                     <asp:ListItem Value="B">ICT250 Dial IP-CTLS</asp:ListItem>
                     <asp:ListItem Value="C">PAD Externo (i3010)</asp:ListItem>
@@ -92,12 +92,12 @@
                 <asp:TextBox ID="TextBox11" runat="server" Height="80px" Width="185px"></asp:TextBox>
             </td>
             <td></td>
-            <td>Se instalo exitosamente:</td>
+            <!--<td>Se instalo exitosamente:</td>-->
             <td>
-                <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                <!--<asp:RadioButtonList ID="RadioButtonList1" runat="server">
                     <asp:ListItem Value="Si"></asp:ListItem>
                     <asp:ListItem Value="No"></asp:ListItem>
-                </asp:RadioButtonList>
+                </asp:RadioButtonList>-->
             </td>
             <td></td>
         </tr>
@@ -105,11 +105,11 @@
             <td></td>
             <td></td>
             <td></td>
-            <td>Se señalizo:</td>
+            <!--<td>Se señalizo:</td>
             <td>
                 <asp:CheckBox ID="CheckBox1" runat="server" Text="Ok" />
             </td>
-            <td></td>
+            <td></td>-->
         </tr>
         <tr>
             <td></td>
