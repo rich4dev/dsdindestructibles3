@@ -13,17 +13,12 @@ namespace DSDIndestructibles3.Test
 
             Services.SolicitudServicio.SolicitudServicioBE oSolicitud = new Services.SolicitudServicio.SolicitudServicioBE();
             oSolicitud.SolicitudServicioId = 1;
-            oSolicitud.Capacitado = "1";
-            oSolicitud.CapacitadoCargo = "Cajero";
-            oSolicitud.CapacitadoFecha = DateTime.Today;
-            oSolicitud.CapacitadoNombres = "TEST RICARDO";
-            oSolicitud.ComercioId = 1;
+            oSolicitud.ComercioId = 3;
             oSolicitud.EmpresaId = 1;
             oSolicitud.Estado = "A";
             oSolicitud.FechaReg = DateTime.Today;
             oSolicitud.MotivoSolicitudId = 1;
-            oSolicitud.SerieFisicoAtn = "3214121421";
-            oSolicitud.TerminalInstaladoId = 1;
+            oSolicitud.TerminalSolicitadoId = 1;
             oClient.Registrar(oSolicitud);
         }
         [TestMethod]

@@ -55,7 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
-    <Compile Include="ClienteData.cs" />
+    <Compile Include="ClienteData.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Empresa.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="MotivoSolicitud.cs" />

@@ -19,6 +19,7 @@ namespace DSDIndestructibles3.Web.forms.procesos
 
         private void LoadData()
         {
+            txtFecSol.Text = DateTime.Today.ToShortDateString();
             var oMotivoSolicitudServiceClient = new Services.MotivoSolicitud.MotivoSolicitudServiceClient();
             var oMotSol = new Services.MotivoSolicitud.MotivoSolicitudDTO();
 
@@ -34,6 +35,14 @@ namespace DSDIndestructibles3.Web.forms.procesos
             ddlCli.DataTextField = "Descripcion";
             ddlCli.DataValueField = "ClienteId";
             ddlCli.DataBind();
+
+            var oTerminalServiceClient = new Services.Terminal.TerminalServiceClient();
+            var oTerminal = new Services.Terminal.TerminalDTO();
+
+            ddlTerSol.DataSource = oTerminalServiceClient.GetAll();
+            ddlTerSol.DataTextField = "Descripcion";
+            ddlTerSol.DataValueField = "TerminalId";
+            ddlTerSol.DataBind();
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
@@ -47,18 +56,15 @@ namespace DSDIndestructibles3.Web.forms.procesos
                 oSol.TerminalSolicitadoId = int.Parse(ddlTerSol.SelectedValue);
                 oSol.Estado = ddlEstado.SelectedValue;
                 oSol.UsrReg = MySession.UserId;
+                oSol.FechaReg = DateTime.Today;
                 oClient.Registrar(oSol);
 
-                ClientScriptManager cs = Page.ClientScript;
-                cs.RegisterClientScriptBlock(this.GetType(), "Msj", "Solicitud registrada correctamente.");
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "showSaveMessage", "<script language='javascript'>alert('Solicitud registrada correctamente');</script>");
             }
             catch (Exception)
             {
-                
-                throw;
-            }
-            
-
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "showSaveMessageError", "<script language='javascript'>alert('Ocurrio un error.');</script>");
+            }          
         }
     }
 }

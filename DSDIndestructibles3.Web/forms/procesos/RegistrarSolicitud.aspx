@@ -73,7 +73,7 @@
         <tr>
             <td>&nbsp;</td>
             <td>
-                <asp:Button ID="btnRegistrar" runat="server" OnClick="btnRegistrar_Click" Text="Registrar" />
+                <asp:Button ID="btnRegistrar" runat="server" OnClientClick="if (!confirm('Esta seguro que desea registrar la solicitud?')) return false;"  OnClick="btnRegistrar_Click" Text="Registrar" />
 &nbsp;<asp:Button ID="btnCancelar" runat="server" Text="Cancelar" />
             </td>
             <td>&nbsp;</td>

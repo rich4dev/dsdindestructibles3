@@ -57,7 +57,19 @@
         <tr>
             <td>Modelo POS Instalado:</td>
             <td>
-                <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:ListItem Value="ALL">      --------------------------</asp:ListItem>
+                    <asp:ListItem Value="A">DIGI</asp:ListItem>
+                    <asp:ListItem Value="B">ICT250 Dial IP-CTLS</asp:ListItem>
+                    <asp:ListItem Value="C">PAD Externo (i3010)</asp:ListItem>
+                    <asp:ListItem Value="D">PAD Int.Caj (3500)</asp:ListItem>
+                    <asp:ListItem Value="E">PAD Int.Caj (i3070)</asp:ListItem>
+                    <asp:ListItem Value="F">POS Dial Up A (5100)</asp:ListItem>
+                    <asp:ListItem Value="G">POS Dial Up B (Aqua)</asp:ListItem>
+                    <asp:ListItem Value="H">POS IP (5100 IP)</asp:ListItem>
+                    <asp:ListItem Value="I">PP320</asp:ListItem>
+                    <asp:ListItem Value="J">VX520 Dial IP</asp:ListItem>
+                </asp:DropDownList>
             </td>
             <td></td>
             <td></td>
@@ -80,12 +92,12 @@
                 <asp:TextBox ID="TextBox11" runat="server" Height="80px" Width="185px"></asp:TextBox>
             </td>
             <td></td>
-            <td>Se instalo exitosamente:</td>
+            <!--<td>Se instalo exitosamente:</td>-->
             <td>
-                <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                <!--<asp:RadioButtonList ID="RadioButtonList1" runat="server">
                     <asp:ListItem Value="Si"></asp:ListItem>
                     <asp:ListItem Value="No"></asp:ListItem>
-                </asp:RadioButtonList>
+                </asp:RadioButtonList>-->
             </td>
             <td></td>
         </tr>
@@ -93,11 +105,11 @@
             <td></td>
             <td></td>
             <td></td>
-            <td>Se señalizo:</td>
+            <!--<td>Se señalizo:</td>
             <td>
                 <asp:CheckBox ID="CheckBox1" runat="server" Text="Ok" />
             </td>
-            <td></td>
+            <td></td>-->
         </tr>
         <tr>
             <td></td>
@@ -120,10 +132,12 @@
             <td></td>
             <td></td>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Cancelar" />
+                <!--<asp:Button ID="Button1" runat="server" Text="Cancelar" />-->
+                <input id="Button1" type="button" value="Cancelar"  OnClick="ShowPopup();"/>
             </td>
             <td>
-                <asp:Button ID="Button2" runat="server" Text="Guardar" />
+                <!--<asp:Button ID="Button2" runat="server" Text="Guardar" />-->
+                <input id="Button2" type="button" value="Guardar"  OnClick="ShowPopup();"/>
             </td>
             <td></td>
         </tr>
@@ -136,4 +150,91 @@
             <td></td>
         </tr>
     </table>
+
+       <div id="popup" style="display: none;">
+           <td>Esta Seguro que no se ha instalado el POS?</td>
+        <table>
+            
+            <tr>
+               
+            </tr>
+        </table>
+
+    </div>
+       <div id="popup1" style="display: none;">
+           <td>Esta Seguro que no se ha señalizado el Comercio?</td>
+        <table>
+            
+            <tr>
+                <td></td>
+                    <td>Existe Señalizacion     :</td>
+                <td>
+                    <asp:CheckBox ID="CheckBox2" runat="server" Text="Ok" />
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                 <td></td>
+            <td>Falta de Espacio        :</td>
+            <td>
+                <asp:CheckBox ID="CheckBox3" runat="server" Text="Ok" />
+            </td>
+            <td></td>
+            </tr>
+            <tr>
+                 <td></td>
+            <td>Rechazado por el Cliente        :</td>
+            <td>
+                <asp:CheckBox ID="CheckBox4" runat="server" Text="Ok" />
+            </td>
+            <td></td>
+            </tr>
+               
+            
+        </table>
+
+    </div>
+    <script>
+        function ShowPopup() {
+            if (RadioButtonList = "No") {
+                $("#popup").show();
+                $("#popup").dialog({
+                    //autoOpen: false,
+                    height: 200,
+                    width: 390,
+                    modal: true,
+                    buttons: {
+                        Si: function () {
+                            ShowPopup1()
+
+                        },
+                        No: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+                return false;
+            }
+        }
+    </script>
+    <script>
+        function ShowPopup1() {
+            $("#popup1").show();
+            $("#popup1").dialog({
+                //autoOpen: false,
+                height: 250,
+                width: 450,
+                modal: true,
+                buttons: {
+                    Guardar: function () {
+                        $(this).dialog("close");
+                    },
+                    Cerrar: function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            return false;
+        }
+    </script>
 </asp:Content>
