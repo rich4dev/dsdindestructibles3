@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <table class="nav-justified">
         <tr>
-            <td class="text-center" colspan="6"><strong>Bandeja de Solicitudes</strong></td>
+            <td class="text-center" colspan="6"><strong>Bandeja de Solicitud</strong></td>
         </tr>
         <tr>
             <td>Desde:</td>
@@ -20,7 +20,7 @@
             <td style="height: 22px">Estado:</td>
             <td style="height: 22px">
                 <asp:DropDownList ID="DropDownList1" runat="server">
-                    <asp:ListItem Value="T">-- TODOS --</asp:ListItem>
+                    <asp:ListItem Value="T">--- TODOS ---</asp:ListItem>
                     <asp:ListItem Value="R">Registrado</asp:ListItem>
                     <asp:ListItem Value="A">Atendido</asp:ListItem>
                     <asp:ListItem Value="C">Cancelado</asp:ListItem>
