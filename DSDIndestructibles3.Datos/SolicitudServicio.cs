@@ -9,6 +9,7 @@ namespace DSDIndestructibles3.Datos
     [Table("SolicitudServicio")]
     public partial class SolicitudServicio
     {
+        [Key]
         public int SolicitudServicioId { get; set; }
 
         public int? ComercioId { get; set; }

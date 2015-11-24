@@ -37,10 +37,10 @@ namespace DSDIndestructibles3.Service
             SolicitudServicioDAO.Delete(id);
         }
 
-        public List<Entities.SolicitudServicioDTO> ListarBandeja(DateTime fechaDesde, DateTime fechaHasta, string estado, int empresaId)
-        {
-            return SolicitudServicioDAO.GetBandeja( fechaDesde,   fechaHasta,   estado,   empresaId);
-        }
+        //public List<Entities.SolicitudServicioDTO> ListarBandeja(DateTime fechaDesde, DateTime fechaHasta, string estado, int empresaId)
+        //{
+        //    return SolicitudServicioDAO.GetBandeja( fechaDesde,   fechaHasta,   estado,   empresaId);
+        //}
 
         public Entities.SolicitudServicioDTO Obtener(int id)
         {
