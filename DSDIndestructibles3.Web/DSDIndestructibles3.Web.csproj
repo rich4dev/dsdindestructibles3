@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -207,22 +208,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Service References\Services.SolicitudServicio\DSDIndestructibles3.Web.Services.SolicitudServicio.SolicitudServicioDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Service References\Services.Seguridad\Seguridad.wsdl" />
     <None Include="Service References\Services.Seguridad\Seguridad.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Services.Seguridad\Seguridad1.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Services.SolicitudServicio\SolicitudServicio.disco" />
-    <None Include="Service References\Services.SolicitudServicio\configuration91.svcinfo" />
-    <None Include="Service References\Services.SolicitudServicio\configuration.svcinfo" />
-    <None Include="Service References\Services.SolicitudServicio\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Service References\Services.Terminal\DSDIndestructibles3.Web.Services.Terminal.TerminalDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -241,16 +232,6 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
-    <None Include="Service References\Services.SolicitudServicio\SolicitudServicio.wsdl" />
-    <None Include="Service References\Services.SolicitudServicio\SolicitudServicio.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Services.SolicitudServicio\SolicitudServicio1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\Services.SolicitudServicio\SolicitudServicio2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\Services.Terminal\TerminalService.wsdl" />
     <None Include="Service References\Services.Terminal\TerminalService.xsd">
       <SubType>Designer</SubType>
@@ -382,11 +363,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\Services.SolicitudServicio\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Service References\Services.Terminal\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -421,8 +397,13 @@
     <WCFMetadataStorage Include="Service References\Services.Cliente\" />
     <WCFMetadataStorage Include="Service References\Services.MotivoSolicitud\" />
     <WCFMetadataStorage Include="Service References\Services.Seguridad\" />
-    <WCFMetadataStorage Include="Service References\Services.SolicitudServicio\" />
     <WCFMetadataStorage Include="Service References\Services.Terminal\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DSDIndestructibles3.Entities\DSDIndestructibles3.DTO.csproj">
+      <Project>{c0c1c19c-c60a-4c83-8bba-14be56159ac5}</Project>
+      <Name>DSDIndestructibles3.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

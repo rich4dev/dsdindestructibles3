@@ -1,9 +1,15 @@
-﻿using System;
+﻿using DSDIndestructibles3.Entities;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Text;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Script.Serialization;
 
 namespace DSDIndestructibles3.Web.forms.procesos
 {
@@ -29,7 +35,7 @@ namespace DSDIndestructibles3.Web.forms.procesos
             ddlMotSol.DataBind();
 
             var oClienteServiceClient = new Services.Cliente.ClienteServiceClient();
-            var oCliente= new Services.Cliente.ClienteDTO();
+            var oCliente = new Services.Cliente.ClienteDTO();
 
             ddlCli.DataSource = oClienteServiceClient.GetAll();
             ddlCli.DataTextField = "Descripcion";
@@ -47,24 +53,60 @@ namespace DSDIndestructibles3.Web.forms.procesos
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Services.SolicitudServicio.SolicitudServicioClient oClient = new Services.SolicitudServicio.SolicitudServicioClient();
-                Services.SolicitudServicio.SolicitudServicioDTO oSol = new Services.SolicitudServicio.SolicitudServicioDTO();
-                oSol.ComercioId = int.Parse(ddlCli.SelectedValue);
-                oSol.MotivoSolicitudId = int.Parse(ddlMotSol.SelectedValue);
-                oSol.TerminalSolicitadoId = int.Parse(ddlTerSol.SelectedValue);
-                oSol.Estado = ddlEstado.SelectedValue;
-                oSol.UsrReg = MySession.UserId;
-                oSol.FechaReg = DateTime.Today;
-                oClient.Registrar(oSol);
+            //try
+            //{
+            //    Services.SolicitudServicio.SolicitudServicioClient oClient = new Services.SolicitudServicio.SolicitudServicioClient();
+            //    Services.SolicitudServicio.SolicitudServicioDTO oSol = new Services.SolicitudServicio.SolicitudServicioDTO();
+            //    oSol.ComercioId = int.Parse(ddlCli.SelectedValue);
+            //    oSol.MotivoSolicitudId = int.Parse(ddlMotSol.SelectedValue);
+            //    oSol.TerminalSolicitadoId = int.Parse(ddlTerSol.SelectedValue);
+            //    oSol.Estado = ddlEstado.SelectedValue;
+            //    oSol.UsrReg = MySession.UserId;
+            //    oSol.FechaReg = DateTime.Today;
+            //    oClient.Registrar(oSol);
 
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "showSaveMessage", "<script language='javascript'>alert('Solicitud registrada correctamente');</script>");
-            }
-            catch (Exception)
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "showSaveMessageError", "<script language='javascript'>alert('Ocurrio un error.');</script>");
-            }          
+            //    Page.ClientScript.RegisterStartupScript(this.GetType(), "showSaveMessage", "<script language='javascript'>alert('Solicitud registrada correctamente');</script>");
+            //}
+            //catch (Exception)
+            //{
+            //    Page.ClientScript.RegisterStartupScript(this.GetType(), "showSaveMessageError", "<script language='javascript'>alert('Ocurrio un error.');</script>");
+            //}          
+
+            //if (Validar())
+            //{
+
+            //}
+
+            string postdata =
+                "{\"ComercioId\":\"" + ddlCli.SelectedValue + "\",\"MotivoSolicitudId\":\"" + ddlMotSol.SelectedValue +
+                "\",\"TerminalSolicitadoId\":\"" + ddlTerSol.SelectedValue + "\",\"Estado\":\"" + ddlEstado.SelectedValue +
+                "\",\"UsrReg\":\"" + MySession.UserId.ToString() + "\"}";
+            byte[] data = Encoding.UTF8.GetBytes(postdata);
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create("http://localhost:29231/SolicitudServicio.svc/SolicitudServicio");
+            req.Method = "POST";
+            req.ContentLength = data.Length;
+            req.ContentType = "application/json";
+            var reqStream = req.GetRequestStream();
+            reqStream.Write(data, 0, data.Length);
+            var res = (HttpWebResponse)req.GetResponse();
+            StreamReader reader = new StreamReader(res.GetResponseStream());
+            string alumnoJson = reader.ReadToEnd();
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            SolicitudServicioDTO solicitud = js.Deserialize<SolicitudServicioDTO>(alumnoJson);
+        }
+
+        private bool Validar()
+        {
+            // http://localhost:29231/SolicitudServicio.svc/SolicitudServicio/Buscar/?idMotivo=1&idComercio=1&idModelo=1
+            HttpWebRequest req2 = (HttpWebRequest)WebRequest.Create("http://localhost:29231/SolicitudServicio.svc/SolicitudServicio/Buscar/?idMotivo=" + ddlMotSol.SelectedValue + "&idComercio=" + ddlCli.SelectedValue + "&idModelo=" + ddlTerSol.SelectedValue);
+            req2.Method = "GET";
+            HttpWebResponse res2 = (HttpWebResponse)req2.GetResponse();
+            StreamReader reader2 = new StreamReader(res2.GetResponseStream());
+            string solicitudJson2 = reader2.ReadToEnd();
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            SolicitudServicioDTO solicitudObtenido = js.Deserialize<SolicitudServicioDTO>(solicitudJson2);
+
+            return false;
         }
     }
 }

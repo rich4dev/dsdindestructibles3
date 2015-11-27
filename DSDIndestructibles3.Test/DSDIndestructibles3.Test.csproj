@@ -47,6 +47,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <Choose>
@@ -113,6 +115,12 @@
     <Content Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DSDIndestructibles3.Entities\DSDIndestructibles3.DTO.csproj">
+      <Project>{c0c1c19c-c60a-4c83-8bba-14be56159ac5}</Project>
+      <Name>DSDIndestructibles3.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

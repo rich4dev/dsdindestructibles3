@@ -9,67 +9,67 @@ namespace DSDIndestructibles3.Entities
     public class SolicitudServicioDTO
     {
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public int SolicitudServicioId { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public string Numero { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public int ComercioId { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public int MotivoSolicitudId { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public int TerminalSolicitadoId { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public int? TerminalInstaladoId { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public string SerieFisicoAtn { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public string SerieVirtualAtn { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public string Capacitado { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public string CapacitadoNombres { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public string CapacitadoCargo { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public DateTime? CapacitadoFecha { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public string Senalizado { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public string SenalizadoDescripcion { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public string Estado { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public int EmpresaId { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = false)]
         public DateTime FechaReg { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = false)]
         public int UsrReg { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = false)]
         public DateTime? FechaMod { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = false)]
         public int? UsrMod { get; set; }
 
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public string ClienteRuc { get; set; }
 
-        [DataMember]
+        [DataMember(IsRequired =false)]
         public string ClienteRazonSocial { get; set; }
 
     }

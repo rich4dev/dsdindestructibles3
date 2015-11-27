@@ -22,6 +22,7 @@ namespace DSDIndestructibles3.Datos
                 lista = context.Cliente
                     .Select(x => new ClienteDTO()
                     {
+                        ClienteId = x.ClienteId,
                         Contacto = x.Contacto,
                         Descripcion = x.Ruc + " - " + x.RazonSocial,
                         Ruc = x.Ruc,

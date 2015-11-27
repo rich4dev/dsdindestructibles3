@@ -52,6 +52,7 @@
     <Compile Include="ClienteDTO.cs" />
     <Compile Include="EmpresaDTO.cs" />
     <Compile Include="MotivoSolicitudDTO.cs" />
+    <Compile Include="MyCustomErrorDetail.cs" />
     <Compile Include="PerfilDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolicitudServicioDTO.cs" />

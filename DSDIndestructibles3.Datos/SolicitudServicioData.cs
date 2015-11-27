@@ -11,17 +11,21 @@ namespace DSDIndestructibles3.Datos
 {
     public class SolicitudServicioData
     {
-        public void Add(SolicitudServicioDTO entidad)
+        public int Add(SolicitudServicioDTO entidad)
         {
+            int id = 0;
             Mapper.CreateMap<SolicitudServicioDTO, SolicitudServicio>();
 
             using (Model1 context =
                new Model1())
             {
                 var newEntidad = Mapper.Map<SolicitudServicio>(entidad);
+                newEntidad.FechaReg = DateTime.Now;
                 context.SolicitudServicio.Add(newEntidad);
                 context.SaveChanges();
+                id = newEntidad.SolicitudServicioId;
             }
+            return id;
         }
         public void Update(SolicitudServicioDTO entidad)
         {
@@ -60,16 +64,18 @@ namespace DSDIndestructibles3.Datos
 
             return entidadDTO;
         }
-        public List<SolicitudServicioDTO> GetBandeja(DateTime fechaDesde, DateTime fechaHasta, string estado, int empresaId)
+        public List<SolicitudServicioDTO> GetBandeja(string fechaDesde, string fechaHasta, string estado, int empresaId)
         {
             var lista = new List<SolicitudServicioDTO>();
             var listaQuery = new object();
             using (Model1 context =
                new Model1())
             {
+                DateTime startDt = DateTime.Parse(fechaDesde);
+                DateTime endDt = DateTime.Parse(fechaHasta);
                 var query = from s in context.SolicitudServicio
                         join c in context.Cliente on s.ComercioId equals c.ClienteId
-                        where (c.FechaReg >= fechaDesde && c.FechaReg <= fechaHasta) && c.Estado == estado && s.EmpresaId == empresaId
+                            where (c.FechaReg >= startDt && c.FechaReg <= endDt) && c.Estado == estado && s.EmpresaId == empresaId
                         select new SolicitudServicioDTO()
                                             {
                                                 SolicitudServicioId = s.SolicitudServicioId,
@@ -90,6 +96,28 @@ namespace DSDIndestructibles3.Datos
                 //    }).ToList();
             }
             return lista;
+        }
+
+        public SolicitudServicioDTO GetByFields(int idMotivo, int idComercio, int idModelo)
+        {
+            Mapper.CreateMap<SolicitudServicio, SolicitudServicioDTO>();
+            var entidadDTO = new SolicitudServicioDTO();
+            using (Model1 context =
+               new Model1())
+            {
+                entidadDTO = (from s in context.SolicitudServicio
+                                join c in context.Cliente on s.ComercioId equals c.ClienteId
+                                where s.MotivoSolicitudId >= idMotivo && s.ComercioId == idComercio && s.TerminalSolicitadoId == idModelo
+                                select new SolicitudServicioDTO()
+                                {
+                                    SolicitudServicioId = s.SolicitudServicioId,
+                                    MotivoSolicitudId = (int)s.MotivoSolicitudId,
+                                    ClienteRuc = c.Ruc,
+                                    ClienteRazonSocial = c.RazonSocial,
+                                    Estado = s.Estado
+                                }).First();
+            }
+            return entidadDTO;
         }
     }
 }

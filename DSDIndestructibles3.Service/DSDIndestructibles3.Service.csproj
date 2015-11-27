@@ -21,6 +21,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClienteService.svc" />
+    <Content Include="Global.asax" />
     <Content Include="MotivoSolicitudService.svc" />
     <Content Include="Seguridad.svc" />
     <Content Include="SolicitudServicio.svc" />
@@ -78,6 +80,9 @@
   <ItemGroup>
     <Compile Include="ClienteService.svc.cs">
       <DependentUpon>ClienteService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IClienteService.cs" />
     <Compile Include="IMotivoSolicitudService.cs" />
