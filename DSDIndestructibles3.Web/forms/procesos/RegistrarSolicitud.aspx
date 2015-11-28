@@ -99,26 +99,26 @@
     </table>
     <script>
 
-        function TestValidar() {
-            var mydata = 'idMotivo=1&idComercio=1&idModelo=1';// ?idMotivo=1&idComercio=1&idModelo=1
-            $.ajax({
-                type: "GET",
-                url: "http://localhost:29231/SolicitudServicio.svc/SolicitudServicio/Buscar/", // Location of the service
-                data: mydata, // '{"idMotivo"="1","idComercio"="1","idModelo"="1"}', //Data sent to server
-                contentType: "application/json;charset-uf8", // content type sent to server
-                dataType: "text", //Expected data format from server
-                success: function (msg) {
-                    //Implement get data from service as you wish
-                    console.log(msg);
-                    console.log(msg.data);
+        //function TestValidar() {
+        //    var mydata = {"id":"1"}; // 'idMotivo=1&idComercio=1&idModelo=1';// ?idMotivo=1&idComercio=1&idModelo=1
+        //    $.ajax({
+        //        type: "GET",
+        //        url: "http://localhost:29231/SolicitudServicio.svc/Obtener", // Location of the service
+        //        data: mydata, // '{"idMotivo"="1","idComercio"="1","idModelo"="1"}', //Data sent to server
+        //        contentType: "application/json; charset=utf-8", // content type sent to server
+        //        dataType: "json", //Expected data format from server
+        //        success: function (msg) {
+        //            //Implement get data from service as you wish
+        //            console.log(msg);
+        //            console.log(msg.data);
 
-                },
-                error: function (err) {
-                    // When Service call fails
-                    console.log(err);
-                }
-            });
-        }
+        //        },
+        //        error: function (err) {
+        //            // When Service call fails
+        //            console.log(err);
+        //        }
+        //    });
+        //}
 
         function Validar() {
             try {

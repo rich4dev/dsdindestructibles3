@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DSDIndestructibles3.Entities"
+                   namespace="DSDIndestructibles3.Entities"
+                   default-lazy="false">
+  <class name="SolicitudServicioBE" table="SolicitudServicio">
+    <id name="SolicitudServicioId" column="SolicitudServicioId">
+      <generator class="identity" />
+    </id>
+    <property name="ComercioId" column="ComercioId" />
+    <property name="MotivoSolicitudId" column="MotivoSolicitudId" />
+    <property name="TerminalSolicitadoId" column="TerminalSolicitadoId" />
+    <property name="TerminalInstaladoId" column="TerminalInstaladoId" />
+    <property name="SerieFisicoAtn" column="SerieFisicoAtn" />
+    <property name="SerieVirtualAtn" column="SerieVirtualAtn" />
+    <property name="Capacitado" column="Capacitado" />
+    <property name="CapacitadoNombres" column="CapacitadoNombres" />
+    <property name="CapacitadoCargo" column="CapacitadoCargo" />
+    <property name="CapacitadoFecha" column="CapacitadoFecha" />
+    <property name="Senalizado" column="Senalizado" />
+    <property name="SenalizadoDescripcion" column="SenalizadoDescripcion" />
+    <property name="Estado" column="Estado" />
+    <property name="EmpresaId" column="EmpresaId" />
+    <property name="FechaReg" column="FechaReg" />
+    <property name="UsrReg" column="UsrReg" />
+    <property name="FechaMod" column="FechaMod" />
+    <property name="UsrMod" column="UsrMod" />
+  </class>
+</hibernate-mapping>

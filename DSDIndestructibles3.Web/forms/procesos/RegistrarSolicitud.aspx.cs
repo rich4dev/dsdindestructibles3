@@ -72,10 +72,10 @@ namespace DSDIndestructibles3.Web.forms.procesos
             //    Page.ClientScript.RegisterStartupScript(this.GetType(), "showSaveMessageError", "<script language='javascript'>alert('Ocurrio un error.');</script>");
             //}          
 
-            //if (Validar())
-            //{
+            if (Validar())
+            {
 
-            //}
+            }
 
             string postdata =
                 "{\"ComercioId\":\"" + ddlCli.SelectedValue + "\",\"MotivoSolicitudId\":\"" + ddlMotSol.SelectedValue +
@@ -97,14 +97,23 @@ namespace DSDIndestructibles3.Web.forms.procesos
 
         private bool Validar()
         {
-            // http://localhost:29231/SolicitudServicio.svc/SolicitudServicio/Buscar/?idMotivo=1&idComercio=1&idModelo=1
-            HttpWebRequest req2 = (HttpWebRequest)WebRequest.Create("http://localhost:29231/SolicitudServicio.svc/SolicitudServicio/Buscar/?idMotivo=" + ddlMotSol.SelectedValue + "&idComercio=" + ddlCli.SelectedValue + "&idModelo=" + ddlTerSol.SelectedValue);
-            req2.Method = "GET";
-            HttpWebResponse res2 = (HttpWebResponse)req2.GetResponse();
-            StreamReader reader2 = new StreamReader(res2.GetResponseStream());
-            string solicitudJson2 = reader2.ReadToEnd();
-            JavaScriptSerializer js = new JavaScriptSerializer();
-            SolicitudServicioDTO solicitudObtenido = js.Deserialize<SolicitudServicioDTO>(solicitudJson2);
+            try
+            {
+                // http://localhost:29231/SolicitudServicio.svc/SolicitudServicio/Buscar/?idMotivo=1&idComercio=1&idModelo=1
+                HttpWebRequest req2 = (HttpWebRequest)WebRequest.Create(
+                    "http://localhost:29231/SolicitudServicio.svc/SolicitudServicio/Buscar?idMotivo=" + ddlMotSol.SelectedValue + "&idComercio=" + ddlCli.SelectedValue + "&idModelo=" + ddlTerSol.SelectedValue);
+                req2.Method = "GET";
+                HttpWebResponse res2 = (HttpWebResponse)req2.GetResponse();
+                StreamReader reader2 = new StreamReader(res2.GetResponseStream());
+                string solicitudJson2 = reader2.ReadToEnd();
+                JavaScriptSerializer js = new JavaScriptSerializer();
+                SolicitudServicioDTO solicitudObtenido = js.Deserialize<SolicitudServicioDTO>(solicitudJson2);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
 
             return false;
         }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="DSDIndestructibles3.Entities"
+                   namespace="DSDIndestructibles3.Entities"
+                   default-lazy="false">
+  <class name="TerminalBE" table="Terminal">
+    <id name="TerminalId" column="TerminalId">
+      <generator class="identity" />
+    </id>
+    <property name="Tipo" column="Tipo" />
+    <property name="Comunicacion" column="Comunicacion" />
+    <property name="Modelo" column="Modelo" />
+    <property name="Estado" column="Estado" />
+    <property name="FechaReg" column="FechaReg" />
+    <property name="UsrReg" column="UsrReg" />
+    <property name="FechaMod" column="FechaMod" />
+    <property name="UsrMod" column="UsrMod" />
+  </class>
+</hibernate-mapping>
