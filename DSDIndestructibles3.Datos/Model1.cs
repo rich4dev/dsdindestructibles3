@@ -21,6 +21,7 @@ namespace DSDIndestructibles3.Datos
         public virtual DbSet<Terminal> Terminal { get; set; }
         public virtual DbSet<TipoDocumento> TipoDocumento { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Mercaderia> Mercaderia { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

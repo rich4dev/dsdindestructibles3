@@ -60,6 +60,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Empresa.cs" />
+    <Compile Include="Mercaderia.cs" />
     <Compile Include="Model1.cs" />
     <Compile Include="MotivoSolicitud.cs" />
     <Compile Include="MotivoSolicitudData.cs" />
