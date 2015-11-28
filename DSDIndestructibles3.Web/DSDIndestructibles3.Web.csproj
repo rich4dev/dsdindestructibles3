@@ -107,7 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="forms\man\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
@@ -116,6 +115,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="forms\man\Mantenimiento.aspx" />
     <Content Include="forms\procesos\BandejaSolicitud.aspx" />
     <Content Include="forms\procesos\DigitarSolicitud.aspx" />
     <Content Include="forms\procesos\EntregarKit.aspx" />
@@ -275,6 +275,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\man\Mantenimiento.aspx.cs">
+      <DependentUpon>Mantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\man\Mantenimiento.aspx.designer.cs">
+      <DependentUpon>Mantenimiento.aspx</DependentUpon>
     </Compile>
     <Compile Include="forms\procesos\BandejaSolicitud.aspx.cs">
       <DependentUpon>BandejaSolicitud.aspx</DependentUpon>
