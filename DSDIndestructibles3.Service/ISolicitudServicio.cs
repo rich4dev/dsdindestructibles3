@@ -22,12 +22,12 @@ namespace DSDIndestructibles3.Service
         //[WebInvoke(Method = "DELETE", UriTemplate = "SolicitudServicio/Delete/{id}", ResponseFormat = WebMessageFormat.Json)]
         void Eliminar(int id);
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "SolicitudServicio/Obtener/?id={id}", ResponseFormat = WebMessageFormat.Json)]
-        SolicitudServicioDTO Obtener(int id);
+        [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
+        SolicitudServicioDTO Obtener(int id); // UriTemplate = "SolicitudServicio/Obtener/?id={id}", 
         //[OperationContract]
         //List<SolicitudServicioDTO> ListarBandeja(string fechaDesde, string fechaHasta, string estado, int empresaId);
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "SolicitudServicio/Buscar/?idMotivo={idMotivo}&idComercio={idComercio}&idModelo={idModelo}", ResponseFormat = WebMessageFormat.Json)]
-        SolicitudServicioDTO ObtenerPorCampos(int idMotivo, int idComercio, int idModelo);
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json)]
+        SolicitudServicioDTO ObtenerPorCampos(int idMotivo, int idComercio, int idModelo); // , UriTemplate = "SolicitudServicio/Buscar/?idMotivo={idMotivo}&idComercio={idComercio}&idModelo={idModelo}"
     }
 }
