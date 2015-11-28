@@ -124,6 +124,7 @@
     <Content Include="forms\procesos\RegistrarInspeccion.aspx" />
     <Content Include="forms\procesos\RegistrarInstalacion.aspx" />
     <Content Include="forms\procesos\RegistrarSolicitud.aspx" />
+    <Content Include="forms\procesos\RegistrarSolicitudAfilacion.aspx" />
     <Content Include="forms\procesos\SolicitarInstalacion.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="packages.config" />
@@ -330,6 +331,13 @@
     </Compile>
     <Compile Include="forms\procesos\RegistrarSolicitud.aspx.designer.cs">
       <DependentUpon>RegistrarSolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\procesos\RegistrarSolicitudAfilacion.aspx.cs">
+      <DependentUpon>RegistrarSolicitudAfilacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms\procesos\RegistrarSolicitudAfilacion.aspx.designer.cs">
+      <DependentUpon>RegistrarSolicitudAfilacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="forms\procesos\SolicitarInstalacion.aspx.cs">
       <DependentUpon>SolicitarInstalacion.aspx</DependentUpon>
