@@ -10,6 +10,7 @@ using System.Web.Script.Serialization;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Script.Serialization;
+using System.ServiceModel;
 
 namespace DSDIndestructibles3.Web.forms.procesos
 {
@@ -109,12 +110,14 @@ namespace DSDIndestructibles3.Web.forms.procesos
                 JavaScriptSerializer js = new JavaScriptSerializer();
                 SolicitudServicioDTO solicitudObtenido = js.Deserialize<SolicitudServicioDTO>(solicitudJson2);
             }
-            catch (Exception)
+            catch (FaultException<MyCustomErrorDetail> we)
             {
                 
-                throw;
             }
-
+            catch (Exception exc)
+            {
+                                
+            }
             return false;
         }
     }
