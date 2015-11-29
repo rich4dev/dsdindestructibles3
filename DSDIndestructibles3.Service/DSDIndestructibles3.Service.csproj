@@ -75,6 +75,7 @@
     <Content Include="ClienteService.svc" />
     <Content Include="Global.asax" />
     <Content Include="MotivoSolicitudService.svc" />
+    <Content Include="RegistroSolicitudAfilacion.svc" />
     <Content Include="Seguridad.svc" />
     <Content Include="SolicitudServicio.svc" />
     <Content Include="TerminalService.svc" />
@@ -89,6 +90,7 @@
     </Compile>
     <Compile Include="IClienteService.cs" />
     <Compile Include="IMotivoSolicitudService.cs" />
+    <Compile Include="IRegistroSolicitudAfilacion.cs" />
     <Compile Include="ISeguridad.cs" />
     <Compile Include="ISolicitudServicio.cs" />
     <Compile Include="ITerminalService.cs" />
@@ -96,6 +98,9 @@
       <DependentUpon>MotivoSolicitudService.svc</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroSolicitudAfilacion.svc.cs">
+      <DependentUpon>RegistroSolicitudAfilacion.svc</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad.svc.cs">
       <DependentUpon>Seguridad.svc</DependentUpon>
     </Compile>
