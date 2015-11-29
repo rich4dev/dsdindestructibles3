@@ -52,8 +52,10 @@ namespace DSDIndestructibles3.Service
             SolicitudServicioDTO sol = SolicitudServicioDAO.Get(id);
             if (sol == null)
             {
-                MyCustomErrorDetail customError = new MyCustomErrorDetail("SolicitudServicio no existe",
-                "No existe SolicitudServicio con id.");
+                MyCustomErrorDetail customError = new MyCustomErrorDetail();
+                customError.ErrorDetails = "SolicitudServicio no existe";
+                customError.ErrorInfo = "No existe SolicitudServicio con id.";
+                
                 throw new WebFaultException<MyCustomErrorDetail>(customError, HttpStatusCode.NotFound);
             }
             return sol;
@@ -64,8 +66,9 @@ namespace DSDIndestructibles3.Service
             SolicitudServicioDTO sol = SolicitudServicioDAO.GetByFields(idMotivo, idComercio, idModelo);
             if (sol != null)
             {
-                MyCustomErrorDetail customError = new MyCustomErrorDetail("SolicitudServicio existe",
-                "SolicitudServicio existe. Para una nuevo registro, los campo motivo, comercio and modelo no deben estar registrado.");
+                MyCustomErrorDetail customError = new MyCustomErrorDetail();
+                customError.ErrorDetails = "SolicitudServicio existe";
+                customError.ErrorInfo = "SolicitudServicio existe. Para una nuevo registro, los campo motivo, comercio and modelo no deben estar registrado.";
                 throw new WebFaultException<MyCustomErrorDetail>(customError, HttpStatusCode.Found);
             }
             return sol;

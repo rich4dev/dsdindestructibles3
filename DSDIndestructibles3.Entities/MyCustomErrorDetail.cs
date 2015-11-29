@@ -8,16 +8,11 @@ namespace DSDIndestructibles3.Entities
     [DataContract]
     public class MyCustomErrorDetail
     {
-        public MyCustomErrorDetail(string errorInfo, string errorDetails)
-        {
-            ErrorInfo = errorInfo;
-            ErrorDetails = errorDetails;
-        }
 
         [DataMember]
-        public string ErrorInfo { get; private set; }
+        public string ErrorInfo { get; set; }
 
         [DataMember]
-        public string ErrorDetails { get; private set; }
+        public string ErrorDetails { get; set; }
     }
 }

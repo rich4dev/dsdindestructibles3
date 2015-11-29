@@ -115,7 +115,7 @@ namespace DSDIndestructibles3.Datos
                                     ClienteRuc = c.Ruc,
                                     ClienteRazonSocial = c.RazonSocial,
                                     Estado = s.Estado
-                                }).First();
+                                }).FirstOrDefault();
             }
             return entidadDTO;
         }

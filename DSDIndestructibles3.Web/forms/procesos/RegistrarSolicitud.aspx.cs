@@ -11,6 +11,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Script.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 
 namespace DSDIndestructibles3.Web.forms.procesos
 {
@@ -102,7 +103,7 @@ namespace DSDIndestructibles3.Web.forms.procesos
             {
                 // http://localhost:29231/SolicitudServicio.svc/SolicitudServicio/Buscar/?idMotivo=1&idComercio=1&idModelo=1
                 HttpWebRequest req2 = (HttpWebRequest)WebRequest.Create(
-                    "http://localhost:29231/SolicitudServicio.svc/SolicitudServicio/Buscar?idMotivo=" + ddlMotSol.SelectedValue + "&idComercio=" + ddlCli.SelectedValue + "&idModelo=" + ddlTerSol.SelectedValue);
+                    "http://localhost:29231/SolicitudServicio.svc/ObtenerPorCampos?idMotivo=" + ddlMotSol.SelectedValue + "&idComercio=" + ddlCli.SelectedValue + "&idModelo=" + ddlTerSol.SelectedValue);
                 req2.Method = "GET";
                 HttpWebResponse res2 = (HttpWebResponse)req2.GetResponse();
                 StreamReader reader2 = new StreamReader(res2.GetResponseStream());
@@ -110,14 +111,18 @@ namespace DSDIndestructibles3.Web.forms.procesos
                 JavaScriptSerializer js = new JavaScriptSerializer();
                 SolicitudServicioDTO solicitudObtenido = js.Deserialize<SolicitudServicioDTO>(solicitudJson2);
             }
-            catch (FaultException<MyCustomErrorDetail> we)
+            catch (WebException e)
             {
-                
+                HttpStatusCode code = ((HttpWebResponse)e.Response).StatusCode;
+                string message = ((HttpWebResponse)e.Response).StatusDescription;
+                StreamReader reader = new StreamReader(e.Response.GetResponseStream());
+                string error = reader.ReadToEnd();
+                JavaScriptSerializer js = new JavaScriptSerializer();
+                MyCustomErrorDetail Observacion = js.Deserialize<MyCustomErrorDetail>(error);
+                string s = "";
+                s = Observacion.ErrorDetails;
             }
-            catch (Exception exc)
-            {
-                                
-            }
+
             return false;
         }
     }
