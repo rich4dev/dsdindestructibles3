@@ -118,4 +118,25 @@
             <td></td>
         </tr>
     </table>
+    <script>
+        function ShowPopup() {
+            $("#popup").show();
+            $("#popup").dialog({
+                //autoOpen: false,
+                title: "Esta seguro de los datos a grabar?",
+                height: 300,
+                width: 350,
+                modal: true,
+                buttons: {
+                    Si: function () {
+                        $(this).dialog("close");
+                    },
+                    No: function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+            return false;
+        }
+    </script>
 </asp:Content>
