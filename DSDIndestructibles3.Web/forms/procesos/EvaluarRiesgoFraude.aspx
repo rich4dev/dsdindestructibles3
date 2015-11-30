@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <table>
         <tr>
-            <td colspan="5" style="text-align: center; font-weight: 700">Registrar Instalación</td>
+            <td colspan="5" style="text-align: center; font-weight: bold">Evaluacion Riesgo Fraude</td>
         </tr>
         <tr>
             <td>Id Cliente:</td>
