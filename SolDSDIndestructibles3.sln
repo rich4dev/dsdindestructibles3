@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{28BF13
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSDIndestructibles3.ConsoleApp", "DSDIndestructibles3.ConsoleApp\DSDIndestructibles3.ConsoleApp.csproj", "{F04E1FCA-E816-4BAB-B3FA-07D2DB653B75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{D946EDE3-4069-457F-AA56-EA0B38B15628}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D946EDE3-4069-457F-AA56-EA0B38B15628}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D946EDE3-4069-457F-AA56-EA0B38B15628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04E1FCA-E816-4BAB-B3FA-07D2DB653B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04E1FCA-E816-4BAB-B3FA-07D2DB653B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04E1FCA-E816-4BAB-B3FA-07D2DB653B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04E1FCA-E816-4BAB-B3FA-07D2DB653B75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

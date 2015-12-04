@@ -3,6 +3,7 @@ using DSDIndestructibles3.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Messaging;
 using System.Net;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -26,8 +27,25 @@ namespace DSDIndestructibles3.Service
         }
         public SolicitudServicioDTO Registrar(Entities.SolicitudServicioDTO oSolicitudServicioBE)
         {
-            int id = SolicitudServicioDAO.Add(oSolicitudServicioBE);
+            int id = 0;
+            try
+            {
+                id = SolicitudServicioDAO.Add(oSolicitudServicioBE);
+            }
+            catch (Exception)
+            {
+                string rutacola = @".\private$\SolicitudServicioRecibida";
+                if (!MessageQueue.Exists(rutacola))
+                    MessageQueue.Create(rutacola);
 
+                MessageQueue cola = new MessageQueue(rutacola);
+                Message mensaje = new Message();
+                mensaje.Label = "Nueva Solicitud de Servicio";
+                mensaje.Body = oSolicitudServicioBE;
+                cola.Send(mensaje);
+                oSolicitudServicioBE.SolicitudServicioId = -1;
+                return oSolicitudServicioBE;
+            }
             var obj = solicitudServicioDAO.Get(id);
             return obj;
         }
