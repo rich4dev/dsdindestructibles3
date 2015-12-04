@@ -31,22 +31,22 @@ namespace DSDIndestructible.SOAP
             SolicitudAfiliacion _Be = (SolicitudAfiliacion)solicitud;//pasarle la entidad
             objCommand.Transaction = trans;
             objCommand.CommandType = CommandType.StoredProcedure;
-            objCommand.Parameters.Add("@1", SqlDbType.VarChar).Value = _Be.SRUC;
-            objCommand.Parameters.Add("@2", SqlDbType.VarChar).Value = _Be.SRAZO_SOCI;
-            objCommand.Parameters.Add("@3", SqlDbType.VarChar).Value = _Be.SNOMB_COME;
-            objCommand.Parameters.Add("@4", SqlDbType.VarChar).Value = _Be.SDIRE_COME;
-            objCommand.Parameters.Add("@5", SqlDbType.VarChar).Value = _Be.SDIRE_ADMI;
-            objCommand.Parameters.Add("@6", SqlDbType.VarChar).Value = _Be.SREPR_LEGA_1;
-            objCommand.Parameters.Add("@7", SqlDbType.VarChar).Value = _Be.SREPR_LEGA_2;
-            objCommand.Parameters.Add("@8", SqlDbType.VarChar).Value = _Be.SPERS_CONT;
-            objCommand.Parameters.Add("@9", SqlDbType.VarChar).Value = _Be.SNUME_CUEN;
-            objCommand.Parameters.Add("@10", SqlDbType.VarChar).Value = _Be.SMONE;
-            objCommand.Parameters.Add("@11", SqlDbType.VarChar).Value = _Be.SENTI_FINA;
-            objCommand.Parameters.Add("@12", SqlDbType.VarChar).Value = _Be.STIPO_AFIL;
-            objCommand.Parameters.Add("@13", SqlDbType.VarChar).Value = _Be.STIPO_PROD;
-            objCommand.Parameters.Add("@14", SqlDbType.VarChar).Value = _Be.STIPO_COMU;
-            objCommand.Parameters.Add("@15", SqlDbType.VarChar).Value = _Be.SFECH_INST;
-
+            objCommand.Parameters.Add("@ruc", SqlDbType.VarChar).Value = _Be.SRUC;
+            objCommand.Parameters.Add("@razonsocial", SqlDbType.VarChar).Value = _Be.SRAZO_SOCI;
+            objCommand.Parameters.Add("@nombrcomercial", SqlDbType.VarChar).Value = _Be.SNOMB_COME;
+            objCommand.Parameters.Add("@direccioncomercial", SqlDbType.VarChar).Value = _Be.SDIRE_COME;
+            objCommand.Parameters.Add("@direccionadmin", SqlDbType.VarChar).Value = _Be.SDIRE_ADMI;
+            objCommand.Parameters.Add("@reprelegal1", SqlDbType.VarChar).Value = _Be.SREPR_LEGA_1;
+            objCommand.Parameters.Add("@reprelegal2", SqlDbType.VarChar).Value = _Be.SREPR_LEGA_2;
+            objCommand.Parameters.Add("@personcontactoventa", SqlDbType.VarChar).Value = _Be.SPERS_CONT;
+            objCommand.Parameters.Add("@numerocuentabancaria", SqlDbType.VarChar).Value = _Be.SNUME_CUEN;
+            objCommand.Parameters.Add("@tipocuenta", SqlDbType.VarChar).Value = _Be.STIPO_CUEN;
+            objCommand.Parameters.Add("@tipomoneda", SqlDbType.VarChar).Value = _Be.SMONE;
+            objCommand.Parameters.Add("@entidadfinan", SqlDbType.VarChar).Value = _Be.SENTI_FINA;
+            objCommand.Parameters.Add("@tipoafiliacion", SqlDbType.VarChar).Value = _Be.STIPO_AFIL;
+            objCommand.Parameters.Add("@tipoproducto", SqlDbType.VarChar).Value = _Be.STIPO_PROD;
+            objCommand.Parameters.Add("@tipocomunicacion", SqlDbType.VarChar).Value = _Be.STIPO_COMU;
+            objCommand.Parameters.Add("@fechainstal", SqlDbType.VarChar).Value = _Be.SFECH_INST;	
             objCommand.ExecuteNonQuery();
             trans.Commit();
             objConnection.Close();

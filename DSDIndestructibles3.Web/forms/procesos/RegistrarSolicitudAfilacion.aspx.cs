@@ -100,7 +100,7 @@ namespace DSDIndestructibles3.Web.forms.procesos
             txtrazonsocial.Text = "";
             txtnombrecomercial.Text = "";
             txtdirecomercial.Text = "";
-            txtdirecomercial.Text = "";
+            txtdirecadmin.Text = "";
             txtrepresenante1.Text = "";
             txtrepresentante2.Text = "";
             txtpersonalcontacto.Text = "";
@@ -112,7 +112,7 @@ namespace DSDIndestructibles3.Web.forms.procesos
             txttipoproducto.Text = "";
             txttipocomunicacion.Text = "";
             txtfechainstalacion.Text = "";
-        
+            
         }
 
         protected void btnlimpiar_Click(object sender, EventArgs e)
