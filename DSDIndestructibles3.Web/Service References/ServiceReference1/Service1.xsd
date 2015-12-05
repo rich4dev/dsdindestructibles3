@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Datos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DSDIndestructibles3.Datos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SolicitudAfiliacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SDIRE_ADMI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SDIRE_COME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SENTI_FINA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SFECH_INST" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SMONE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SNOMB_COME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SNUME_CUEN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SPERS_CONT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SRAZO_SOCI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SREPR_LEGA_1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SREPR_LEGA_2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SRUC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STIPO_AFIL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STIPO_COMU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STIPO_CUEN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STIPO_PROD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SolicitudAfiliacion" nillable="true" type="tns:SolicitudAfiliacion" />
+</xs:schema>

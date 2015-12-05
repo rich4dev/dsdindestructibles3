@@ -66,6 +66,7 @@
     <Compile Include="MotivoSolicitudData.cs" />
     <Compile Include="Perfil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SolicitudAfiliacion.cs" />
     <Compile Include="SolicitudServicio.cs" />
     <Compile Include="SolicitudServicioData.cs" />
     <Compile Include="sysdiagrams.cs" />
