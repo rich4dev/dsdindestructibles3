@@ -27,6 +27,7 @@ namespace DSDIndestructibles3.Web.forms.procesos
             txtfechains.Text = "";
             txthorains.Text = "";
             txtobs.Text = "";
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
