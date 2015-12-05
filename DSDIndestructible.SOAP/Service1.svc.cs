@@ -50,8 +50,6 @@ namespace DSDIndestructible.SOAP
             objCommand.ExecuteNonQuery();
             trans.Commit();
             objConnection.Close();
-
-
             return "salio";
         }
 
@@ -62,7 +60,7 @@ namespace DSDIndestructible.SOAP
             DataSet ObjDataset = new DataSet();
             SqlDataAdapter objAdapater = new SqlDataAdapter();
             SqlCommand objCommand = new SqlCommand
-        ("Select SolicitudAfiliacionID,RUC,RazonSocial,Nombre_Comercial,DireccionComercial      ,DireccionAdministrativa      ,RepresentanteLegal1      ,RepresentanteLegal2      ,PersonaContactoPuntoVenta      ,NumerocuentaBancaria      ,TipoCuenta      ,TipoMoneda      ,EntidadFinanciera      ,TipoAfiliacion      ,TipoProducto      ,TipoComunicacion      ,FechaInstalacion from SolicitudAfiliacion where RUC='" + ruc.ToString() + "'");
+            ("Select SolicitudAfiliacionID,RUC,RazonSocial,NombreComercial,DireccionComercial,DireccionAdministrativa,RepresentanteLegal1,RepresentanteLegal2,PersonaContactoPuntoVenta,NumerocuentaBancaria,TipoCuenta,TipoMoneda,EntidadFinanciera,TipoAfiliacion,TipoProduccto,TipoComunicacion,FechaInstalacion from SolicitudAfiliacion where RUC='" + ruc.ToString() + "'");
             objConnection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["CnnSQL"].ToString();
             objConnection.Open();
             objCommand.Connection = objConnection;
