@@ -90,6 +90,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IClienteService.cs" />
+    <Compile Include="IEvaluarRiesgoFraude.cs" />
     <Compile Include="IMotivoSolicitudService.cs" />
     <Compile Include="IRegistroSolicitudAfilacion.cs" />
     <Compile Include="ISeguridad.cs" />

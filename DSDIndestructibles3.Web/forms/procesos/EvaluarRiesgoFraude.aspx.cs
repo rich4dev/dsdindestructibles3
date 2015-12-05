@@ -13,5 +13,23 @@ namespace DSDIndestructibles3.Web.forms.procesos
         {
 
         }
+
+
+
+        public void LimpiarCampos()
+        {
+            txtruc.Text = "";
+            txtidcliente.Text = "";
+            txtdirecomer.Text = "";
+            txttelef.Text = "";
+            txtmodelpos.Text = "";
+            txtnom.Text = "";
+            txtfechains.Text = "";
+            txthorains.Text = "";
+            txtobs.Text = "";
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
     }
 }
