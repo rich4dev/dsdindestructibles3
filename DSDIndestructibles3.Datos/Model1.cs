@@ -22,6 +22,8 @@ namespace DSDIndestructibles3.Datos
         public virtual DbSet<TipoDocumento> TipoDocumento { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Mercaderia> Mercaderia { get; set; }
+        public virtual DbSet<Solicitud_Afiliacion> Solicitud_Afiliacion { get; set; }
+        public virtual DbSet<Inspeccion> Inspeccion { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -157,6 +159,99 @@ namespace DSDIndestructibles3.Datos
                 .Property(e => e.Estado)
                 .IsFixedLength()
                 .IsUnicode(false);
+
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.RUC)
+                .IsUnicode(false);
+        
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.RazonSocial)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.NombreComercial)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.DireccionComercial)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.DireccionAdministrativa)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.RepresentanteLegal1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.RepresentanteLegal2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.PersonaContactoPuntoVenta)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.NumeroCuentaBancaria)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.TipoCuenta)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.TipoMoneda)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.EntidadFinanciera)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.TipoAFiliacion)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.TipoProduccto)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.TipoComunicacion)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Solicitud_Afiliacion>()
+                .Property(e => e.FechaInstalacion)
+                .IsUnicode(false);
+
+
+            modelBuilder.Entity<Inspeccion>()
+                .Property(e => e.IdInspeccion);
+    
+            modelBuilder.Entity<Inspeccion>()
+                .Property(e => e.IdSolicitudAfiliacion);
+           
+            modelBuilder.Entity<Inspeccion>()
+                .Property(e => e.Referencias)
+                .IsUnicode(false);
+            
+            modelBuilder.Entity<Inspeccion>()
+                .Property(e => e.TecnicoAsignado)
+                .IsUnicode(false);
+            
+            modelBuilder.Entity<Inspeccion>()
+                .Property(e => e.Fecha);
+            
+            modelBuilder.Entity<Inspeccion>()
+                .Property(e => e.Hora)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Inspeccion>()
+                .Property(e => e.EstadoActual);
+
+        
         }
     }
 }

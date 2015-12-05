@@ -53,11 +53,13 @@
   <ItemGroup>
     <Compile Include="ClienteDTO.cs" />
     <Compile Include="EmpresaDTO.cs" />
+    <Compile Include="InspeccionDTO.cs" />
     <Compile Include="MotivoSolicitudDTO.cs" />
     <Compile Include="MyCustomErrorDetail.cs" />
     <Compile Include="PerfilDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolicitudServicioDTO.cs" />
+    <Compile Include="Solicitud_AfiliacionDTO.cs" />
     <Compile Include="TerminalDTO.cs" />
     <Compile Include="TipoDocumentoDTO.cs" />
     <Compile Include="UsuarioDTO.cs" />

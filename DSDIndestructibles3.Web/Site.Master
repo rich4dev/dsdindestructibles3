@@ -33,6 +33,24 @@
         .ui-widget-header {
             padding: 0.2em;
         }
+
+        #tbSolicitudes .head {    
+            border-left: 1px solid #cbcbcb;
+            border-width: 0 0 0 1px;
+            font-size: inherit;
+            margin: 0;
+            overflow: visible;
+            padding: .5em 1em;
+            padding: 0.5em 1em;
+            font-weight: bold;
+        }
+
+        #tbSolicitudes thead {    
+            background-color: #e0e0e0;
+            color: #000;
+            text-align: left;
+            vertical-align: bottom;
+        }
     </style>
 </head>
 <body>
@@ -84,6 +102,7 @@
                             <li class="ui-widget-header">Afiliaciones</li>
                             <li><a href="EvaluarRiesgoFraude">Evaluar Riesgo Fraude</a></li>
                             <li><a href="RegistrarSolicitud">Registrar Solicitud</a></li>
+                            <li><a href="ProgramarInspeccion">Programar Inspecci&oacute;n</a></li>
                             <li class="ui-widget-header">Instalación</li>
                             <li><a href="SolicitarInstalacion">Solicitar Instalación</a></li>
                             <li><a href="ProgramarInstalacion">Programar Instalación</a></li>

@@ -74,9 +74,11 @@
   <ItemGroup>
     <Content Include="ClienteService.svc" />
     <Content Include="Global.asax" />
+    <Content Include="InspeccionService.svc" />
     <Content Include="MotivoSolicitudService.svc" />
     <Content Include="RegistroSolicitudAfilacion.svc" />
     <Content Include="Seguridad.svc" />
+    <Content Include="SolicitudAfiliacion.svc" />
     <Content Include="SolicitudServicio.svc" />
     <Content Include="TerminalService.svc" />
     <Content Include="Web.config" />
@@ -89,9 +91,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IClienteService.cs" />
+    <Compile Include="IInspeccionService.cs" />
     <Compile Include="IMotivoSolicitudService.cs" />
+    <Compile Include="InspeccionService.svc.cs">
+      <DependentUpon>InspeccionService.svc</DependentUpon>
+    </Compile>
     <Compile Include="IRegistroSolicitudAfilacion.cs" />
     <Compile Include="ISeguridad.cs" />
+    <Compile Include="ISolicitudAfiliacion.cs" />
     <Compile Include="ISolicitudServicio.cs" />
     <Compile Include="ITerminalService.cs" />
     <Compile Include="MotivoSolicitudService.svc.cs">
@@ -103,6 +110,9 @@
     </Compile>
     <Compile Include="Seguridad.svc.cs">
       <DependentUpon>Seguridad.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudAfiliacion.svc.cs">
+      <DependentUpon>SolicitudAfiliacion.svc</DependentUpon>
     </Compile>
     <Compile Include="SolicitudServicio.svc.cs">
       <DependentUpon>SolicitudServicio.svc</DependentUpon>
