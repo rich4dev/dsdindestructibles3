@@ -24,13 +24,8 @@ namespace DSDIndestructible.SOAP
         // TODO: agregue aquí sus operaciones de servicio
     }
 
-
     // Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.
-    
-    
-    
-    
-    
+
     [DataContract]
     public class CompositeType
     {
@@ -166,10 +161,5 @@ namespace DSDIndestructible.SOAP
             get { return sFECH_INST; }
             set { sFECH_INST = value; }
         }
-       
-
-
-
-
     }
 }

@@ -120,8 +120,5 @@ namespace DSDIndestructibles3.Datos
             get { return sTIPO_COMU; }
             set { sTIPO_COMU = value; }
         }
-     
-        
-
     }
 }

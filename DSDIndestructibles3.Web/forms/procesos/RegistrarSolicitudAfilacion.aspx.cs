@@ -38,7 +38,8 @@ namespace DSDIndestructibles3.Web.forms.procesos
             be.SFECH_INST = txtfechainstalacion.Text;
 
             service.GetData(be);
-            lblmensaje.Text = "Se registro chulll";
+         
+            lblmensaje.Text = "Se registro la solicitud : ID ";
             lblmensaje.Visible = true;
             LimpiarCampos();
             //txtNombre.Text = service.Obtener_Reniec(Convert.ToInt32(txtBuscar_DNI.Text)).Nombre;
