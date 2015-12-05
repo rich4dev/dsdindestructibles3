@@ -82,6 +82,7 @@
                     <div>
                         <ul id="menu">
                             <li class="ui-widget-header">Afiliaciones</li>
+                               <li><a href="RegistrarSolicitudAfilacion">Registrar Solicitud Afiliación</a></li>
                             <li><a href="EvaluarRiesgoFraude">Evaluar Riesgo Fraude</a></li>
                             <li><a href="RegistrarSolicitud">Registrar Solicitud</a></li>
                             <li class="ui-widget-header">Instalación</li>
