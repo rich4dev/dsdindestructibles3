@@ -131,16 +131,8 @@ namespace DSDIndestructible.SOAP
                    objCommand.ExecuteNonQuery();
                    trans.Commit();
             objConnection.Close();
-
-
             return 0;
         
-        }
-
-
-
-
-
-     
+        }    
     }
 }

@@ -14,11 +14,11 @@ namespace DSDIndestructibles3.Service
     public interface ISolicitudAfiliacion
     {
         [OperationContract]
-        [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
+        [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
         Solicitud_AfiliacionDTO GetSolicitudAfiliacionById(int id);
         
         [OperationContract]
-        [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Wrapped, ResponseFormat = WebMessageFormat.Json)]
+        [WebInvoke(Method = "GET", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
         List<Solicitud_AfiliacionDTO> GetAllSolicitudAfiliaciones();
 
     }
