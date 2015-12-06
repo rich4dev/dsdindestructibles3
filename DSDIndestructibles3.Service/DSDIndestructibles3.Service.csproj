@@ -92,7 +92,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IClienteService.cs" />
-    <Compile Include="IInspeccionService.cs" />
     <Compile Include="IMotivoSolicitudService.cs" />
     <Compile Include="InspeccionService.svc.cs">
       <DependentUpon>InspeccionService.svc</DependentUpon>
