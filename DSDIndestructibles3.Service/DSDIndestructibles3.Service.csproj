@@ -98,6 +98,7 @@
       <DependentUpon>InspeccionService.svc</DependentUpon>
     </Compile>
     <Compile Include="IRegistroSolicitudAfilacion.cs" />
+    <Compile Include="IRiesgoFraude.cs" />
     <Compile Include="ISeguridad.cs" />
     <Compile Include="ISolicitudAfiliacion.cs" />
     <Compile Include="ISolicitudServicio.cs" />
