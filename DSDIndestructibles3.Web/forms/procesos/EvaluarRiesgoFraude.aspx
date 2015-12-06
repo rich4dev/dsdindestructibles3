@@ -89,7 +89,9 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>
+                <asp:Label ID="lblmensaje" runat="server" Text="Label" Visible="false"></asp:Label>
+             </td>
             <td></td>
         </tr>
         <tr>
@@ -102,7 +104,7 @@
         <tr>
             <td></td>
             <td>
-                <asp:Button ID="btnGuardar0" runat="server" Text="Guardar" OnClientClick="if (!confirm('Esta seguro que desea registrar la solicitud?')){ return false;} else { ShowPopup(); return false;}" />
+                <asp:Button ID="btnGuardar0" runat="server" Text="Guardar" OnClientClick="if (!confirm('Esta seguro que desea registrar la solicitud?')){ return false;} else { ShowPopup(); return false;}" OnClick="btnGuardar0_Click" />
             </td>
             <td></td>
             <td>
