@@ -7,45 +7,45 @@
         <tr>
             <td>Id Cliente:</td>
             <td>
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtidcliente" runat="server"></asp:TextBox>
             </td>
             <td></td>
             <td>Razon Social:</td>
             <td>
-                <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtruc" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td>Dirección comercial:</td>
             <td>
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtdirecomer" runat="server"></asp:TextBox>
             </td>
             <td></td>
             <td>Nombre del contacto:</td>
             <td>
-                <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtnom" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td>Telefono:</td>
             <td>
-                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txttelef" runat="server"></asp:TextBox>
             </td>
             <td></td>
             <td>Fecha Instalación</td>
             <td>
-                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtfechains" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td>Modelo del POS:</td>
             <td>
-                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtmodelpos" runat="server"></asp:TextBox>
             </td>
             <td></td>
             <td>Hora de Instalación</td>
             <td>
-                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txthorains" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -62,7 +62,7 @@
         <tr>
             <td>Observaciones:</td>
             <td>
-                <asp:TextBox ID="TextBox11" runat="server" Height="80px" Width="185px"></asp:TextBox>
+                <asp:TextBox ID="txtobs" runat="server" Height="80px" Width="185px"></asp:TextBox>
             </td>
             <td></td>
             <td>Se presentaron todos los papeles:</td>
@@ -89,25 +89,29 @@
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+                <asp:Label ID="lblmensaje" runat="server" Text="Label" Visible="false"></asp:Label>
+             </td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
             <td></td>
             <td>
-                <asp:Button ID="Button1" runat="server" Text="Cancelar" />
+                <asp:Button ID="btnGuardar0" runat="server" Text="Guardar" OnClientClick="if (!confirm('Esta seguro que desea registrar la solicitud?')){ return false;} else { ShowPopup(); return false;}" OnClick="btnGuardar0_Click" />
+            </td>
+            <td></td>
+            <td>
+                <asp:Button ID="Button1" runat="server" Text="Limpiar" OnClick="Button1_Click" />
             </td>
             <td>
-                <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClientClick="if (!confirm('Esta seguro que desea registrar la solicitud?')){ return false;} else { ShowPopup(); return false;}" />
+                <asp:Button ID="btnGuardar" runat="server" Text="Cancelar" OnClientClick="if (!confirm('Esta seguro que desea registrar la solicitud?')){ return false;} else { ShowPopup(); return false;}" Height="26px" />
             </td>
         </tr>
         <tr>
