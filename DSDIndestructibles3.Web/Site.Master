@@ -34,6 +34,13 @@
             padding: 0.2em;
         }
 
+        #tbSolicitudes {
+            border-collapse: collapse;
+            border-spacing: 0;
+            empty-cells: show;
+            border: 1px solid #cbcbcb;
+        }
+
         #tbSolicitudes .head {    
             border-left: 1px solid #cbcbcb;
             border-width: 0 0 0 1px;
@@ -44,13 +51,33 @@
             padding: 0.5em 1em;
             font-weight: bold;
         }
-
+        
         #tbSolicitudes thead {    
             background-color: #e0e0e0;
             color: #000;
             text-align: left;
             vertical-align: bottom;
         }
+        
+        #tbSolicitudes tbody td {  
+            padding: 0.5em 1em;
+            border-left: 1px solid #cbcbcb;
+            border-width: 0 0 0 1px;
+            font-size: inherit;
+            margin: 0;
+            overflow: visible;
+        }
+        
+        #tbSolicitudes tbody tr:hover {
+            background-color: rgb(242, 242, 242);
+        }
+
+        .solicitudSelect {
+            background-color: rgb(242, 242, 242);
+            font-weight: bold;
+        }
+
+
     </style>
 </head>
 <body>
@@ -100,9 +127,12 @@
                     <div>
                         <ul id="menu">
                             <li class="ui-widget-header">Afiliaciones</li>
+                               <li><a href="RegistrarSolicitudAfilacion">Registrar Solicitud Afiliación</a></li>
                             <li><a href="EvaluarRiesgoFraude">Evaluar Riesgo Fraude</a></li>
                             <li><a href="RegistrarSolicitud">Registrar Solicitud</a></li>
                             <li><a href="ProgramarInspeccion">Programar Inspecci&oacute;n</a></li>
+                            <li><a href="RegisitrarInspeccion">RegistarInspecci&oacute;n</a></li>
+                            
                             <li class="ui-widget-header">Instalación</li>
                             <li><a href="SolicitarInstalacion">Solicitar Instalación</a></li>
                             <li><a href="ProgramarInstalacion">Programar Instalación</a></li>

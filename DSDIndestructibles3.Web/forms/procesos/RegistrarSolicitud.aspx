@@ -99,42 +99,35 @@
     </table>
     <script>
 
-        //function TestValidar() {
-        //    var mydata = {"id":"1"}; // 'idMotivo=1&idComercio=1&idModelo=1';// ?idMotivo=1&idComercio=1&idModelo=1
-        //    $.ajax({
-        //        type: "GET",
-        //        url: "http://localhost:29231/SolicitudServicio.svc/Obtener", // Location of the service
-        //        data: mydata, // '{"idMotivo"="1","idComercio"="1","idModelo"="1"}', //Data sent to server
-        //        contentType: "application/json; charset=utf-8", // content type sent to server
-        //        dataType: "json", //Expected data format from server
-        //        success: function (msg) {
-        //            //Implement get data from service as you wish
-        //            console.log(msg);
-        //            console.log(msg.data);
-
-        //        },
-        //        error: function (err) {
-        //            // When Service call fails
-        //            console.log(err);
-        //        }
-        //    });
-        //}
-
         function Validar() {
             try {
-                var fecha = '', comercio = '', motivo = '', modelo = '', estado = '';
+                var fecha = '', comercio = '', motivo = '', modelo = '', estado = '', mensaje = '', flag = false;
                 fecha = $("#txtFecSol").val();
                 comercio = $("#ddlCli").val();
                 motivo = $("#ddlMotSol").val();
                 modelo = $("#ddlTerSol").val();
                 estado = $("#ddlEstado").val();
                 if (fecha == '') {
-                    alert('Favor, Ingresar fecha.'); return false;
+                    flag = true;
+                    mensaje += 'Favor, Ingresar fecha.\n';
                 }
-
-                $.aj
-
-
+                if (comercio == 0) {
+                    flag = true;
+                    mensaje += 'Favor, Selecciona comercio.\n';
+                }
+                if (motivo == 0) {
+                    flag = true;
+                    mensaje += 'Favor, Seleccionar motivo.\n';
+                }
+                if (modelo == 0) {
+                    flag = true;
+                    mensaje += 'Favor, Seleccionar modelo.\n';
+                }
+                if (flag) {
+                    alert(mensaje);
+                    return false;
+                }
+                
                 if (!confirm('Esta seguro que desea registrar la solicitud?'))
                     return false;
             } catch (e) {

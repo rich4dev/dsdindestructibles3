@@ -10,6 +10,9 @@ namespace DSDIndestructibles3.Entities
     {
 
         [DataMember]
+        public string Code { get; set; }
+
+        [DataMember]
         public string ErrorInfo { get; set; }
 
         [DataMember]

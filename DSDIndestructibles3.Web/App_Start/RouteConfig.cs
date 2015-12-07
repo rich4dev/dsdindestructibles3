@@ -20,7 +20,12 @@ namespace DSDIndestructibles3.Web
             routes.MapPageRoute("Route4", "EvaluarRiesgoFraude", "~/forms/procesos/EvaluarRiesgoFraude.aspx");
             routes.MapPageRoute("Route5", "SolicitarInstalacion", "~/forms/procesos/SolicitarInstalacion.aspx");
             routes.MapPageRoute("Route6", "RegistrarSolicitud", "~/forms/procesos/RegistrarSolicitud.aspx");
-            routes.MapPageRoute("Route7", "ProgramarInspeccion", "~/forms/procesos/ProgramarInspeccion.aspx");
+
+            routes.MapPageRoute("Route8", "ProgramarInspeccion", "~/forms/procesos/ProgramarInspeccion.aspx");
+            routes.MapPageRoute("Route9", "Registrar Inspeccion", "~/forms/procesos/RegistrarInspeccion.aspx");
+
+            routes.MapPageRoute("Route7", "RegistrarSolicitudAfilacion", "~/forms/procesos/RegistrarSolicitudAfilacion.aspx");
+
         }
     }
 }
